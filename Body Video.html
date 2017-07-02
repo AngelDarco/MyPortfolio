@@ -1,0 +1,247 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Web 01</title>
+<link rel="stylesheet" type="text/css" href="Estilo video.css">
+
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <script type="text/javascript" src="inc/TimeCircles.js"></script>
+        <link rel="stylesheet" href="inc/TimeCircles.css" />  
+        <style type="text/css">
+		 h1{text-align:center; color:#5D6FDB}
+		 h2{text-align:center; color:#4FE598}
+		 body{ align-content:center}
+         </style>
+         
+         
+         <link rel="stylesheet" href="Estilo video.css"/>
+<link href="Prueba 03/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+
+::selection{background:black;color:white;}
+::-webkit-selection{background:black;color:white;}
+::-moz-selection{background:black;color:white;}
+
+*{margin:0;padding:0;outline:0;border:0;font:14px/14px 'fira mono';font-weight:400;}
+body { background-color:#15495D; color:#20F01E;}
+a{color:black;text-decoration:none;}
+
+section{ margin:150px auto; max-width:640px;}
+strong,strong *{font-weight:600;}
+
+del,ins{text-decoration:none;} /*unset del's default strike-trough style, plus ins' underlined*/
+.t-caret{color:blue;} /*styling the caret class*/
+
+-->
+</style>
+
+<script src="Prueba 03/t.min.js"></script>
+
+
+
+<script type="text/javascript">
+/*<![CDATA[*/
+
+var fin=!1;
+
+function foo(){
+$('mark').eq(0).css({background:'magenta'});
+
+}
+
+$(function(){
+
+
+
+$('#t').t({
+
+speed:15,
+speed_vary:true,
+mistype:15, 
+
+
+typing:function(elem,chars_total,chars_left,_char){
+ if(_char=='*')foo();
+ },
+
+fin:function(){
+
+ if(fin==!1){
+  fin=!!1; //avoids triggering after 'add' cmd
+  window.setTimeout(function(){$('#t').t('add','Still here?');},2e4);
+  window.setInterval(function(){$('#t').find('.t-caret').toggle();},5e2);
+ }
+ 
+
+}
+
+});
+
+
+
+});
+
+
+/*]]>*/
+</script>
+
+         
+
+</head>
+
+<body>
+
+
+<video src="Videos/Avatar.mp4" autoplay loop preload muted > </video>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h1> My Life My Mint My hart is Your</h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+              <div class="container">
+            <h2>La espero Señorita Dallana</h2>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            <h2>My time is over, please do not delay</h2>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            
+           <center> <div  id="DateCountdown" data-date="2017-06-30 00:00:00" style="width: 500px; height: 125px; padding: 0px; box-sizing: border-box; background-color:transparent"></div>
+            </center>
+</div>
+        <script>
+            $("#DateCountdown").TimeCircles();
+            $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show: false } }});
+            $("#PageOpenTimer").TimeCircles();
+            
+            var updateTime = function(){
+                var date = $("#date").val();
+                var time = $("#time").val();
+                var datetime = date + ' ' + time + ':00';
+                $("#DateCountdown").data('date', datetime).TimeCircles().start();
+            }
+            $("#date").change(updateTime).keyup(updateTime);
+            $("#time").change(updateTime).keyup(updateTime);
+			            
+        </script>
+<section > 
+  <div id="t" >
+    <p>
+      <mark><a href="//mn.tn/t">comandos cargados correctamente&mdash;DECODIFICANDO</a></mark>
+      
+      Hello Welcome to My world. Let's wait <del>hundred</del>two seconds ..<ins>2</ins><br/><br/>
+  <strong>Thanks for waiting.</strong> </p>
+    <p>&nbsp;</p>
+    <p>Now, t.js will detect a <del>regular</del> 
+      
+      
+      // ==UserScript==</p>
+    <p> // @name         Hacker Experience Aids    </p>
+    <p> // @namespace    http://tampermonkey.net/</p>
+    <p> // @version      0.1</p>
+    <p> // @description  try to take over the world!
+    //</p>
+    <p> @author       Nobody at all... I'm obviously a bot
+    //</p>
+    <p> @include      https://*hackerexperience.com/*?hack
+      // @exclude      https://*hackerexperience.com/hackui
+      // @grant        none
+      // ==/UserScript==
+      
+      win = window.open("https://legacy.hackerexperience.com/hackui", "_blank", "directories=0, fullscreen=1, menubar=0, resizable=0, status=0, titlebar=0, toolbar=0, scrollbars=1, width=400, height=500");
+      win.getLog = function(which, func) {
+      var request = new win.XMLHttpRequest();
+      request.onreadystatechange = function() {
+      if (request.readyState === 4  request.status === 200) {
+      //document.body.innerHTML = request.responseText;
+      var log = request.responseText;
+      log = log.substring(64, log.search(""));
+      //console.log(log);
+      if (log.substring(1, 16) !== ") {func(log);}
+      }
+      };
+      if (which === 0) {
+      request.open("GET", "/internet?view=logs + Math.random(), true);
+      } else if (which === 1) {
+      request.open("GET", "/log?random=" + Math.random(), true);
+      }
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      request.send();
+      };
+      
+      win.main_dialog = function() {
+      win.document.body.innerHTML = "";
+      var div = win.document.createElement("DIV");
+      div.style.cssText = "position: fixed; left: 0; top: 0; width: 100%; height: 100%; margin: 0; border: 3px solid black; background-color: black; color: white; font-family: sans-serif; font-size: 15px;";
+      win.document.body.appendChild(div);
+      };
+      
+      win.log_connected = function() {
+      win.document.body.innerHTML = "";
+      var div = win.document.createElement("DIV");
+      div.style.cssText = "position: fixed; left: 0; top: 0; width: 100%; height: 100%; margin: 0; border: 3px solid black; background-color: black; color: white; font-family: sans-serif; font-size: 15px;";
+      win.document.body.appendChild(div);
+      };
+      
+      win.log_yours = function() {
+      win.document.body.innerHTML = "";
+      var div = win.document.createElement("DIV");
+      */ div.style.cssText = "position: fixed; left: 0; top: 0; width: 100%; height: 100%; margin: 0; background-color: black; color: white; font-family: sans-serif; font-size: 15px;";
+      win.document.body.appendChild(div);
+      };
+      
+      win.onload = function(event) {
+      win.main_dialog();
+      var connected_prelogs = "";
+      var yours_prelogs = "";
+      win.setInterval(function() {
+      try {
+      win.getLog(0, function(logs) {if (logs !== connected_prelogs) {connected_prelogs = logs; win.document.getElementById("log_holder_connected").value += "\n===\n" + logs;}});
+      } catch(error) {}
+      }, 1500);
+      
+      win.setInterval(function() {
+      try {
+      win.getLog(1, function(logs) {if (logs !== yours_prelogs) {yours_prelogs = logs; win.document.getElementById("log_holder_yours").value += "\n" + logs;}});
+      } catch(error) {}
+      }, 1500);
+      
+      };
+      
+      window.onload = function(event) {
+      history.back();
+      };
+      
+      
+      */
+      
+      
+      <mark>
+      
+      
+      
+      </mark>
+      
+      
+      *<ins>2</ins><ins> &larr; Yay, FTW!!</ins>
+      
+      Good <del style="color:red;border-bottom:1px dashed red;">night</del>bye.
+      
+    </p>
+  </div>
+</section>
+
+
+</body>
+</html>
