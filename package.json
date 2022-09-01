@@ -1,37 +1,21 @@
 {
-  "name": "timecircles",
-  "version": "1.5.3",
-  "homepage": "http://git.wimbarelds.nl/TimeCircles/",
-  "authors": [
-    "Wim Barelds <wim.barelds@gmail.com>"
-  ],
-  "description": "TimeCircles is a jQuery plugin that provides a nice looking way to either count down towards a certain time, or to count up from a certain time. The goal for TimeCircles is to provide a simple yet dynamic tool that makes it very easy to provide visitors an attractive countdown or timer.",
-  "main": "inc/TimeCircles.js",
-  "moduleType": [
-    "globals"
-  ],
-  "keywords": [
-    "timer",
-    "stopwatch",
-    "count",
-    "countdown",
-    "time",
-    "date",
-    "datetime",
-    "clock",
-    "comingsoon",
-    "ui",
-    "construction"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-   "dependencies": {
-    "jquery": ">=1.9.1"
+  "name": "myportfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "vite": "^3.0.7"
   }
 }
