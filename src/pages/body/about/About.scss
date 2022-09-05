@@ -6,9 +6,10 @@
     justify-content: center;
 
     .body{
-        background-color: #fff;
-        width: 80%;
-        height: 70%;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        width: var(--width);
+        height: var(--height);
         text-align: center;
         padding: 5%;
         display: flex;
