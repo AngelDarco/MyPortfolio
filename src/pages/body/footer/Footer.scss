@@ -7,9 +7,9 @@
     margin-top: 5%;
 
         .body{
-            width: 100%;
+            width: var(--width);
             height: 90%;
-            padding: 0 12%;
+            padding: 2%;
             color: var(--text-color);
             
             h2{
@@ -19,10 +19,57 @@
                     font-weight: 500;
                 }
             }
-        
             p{
                 text-align: end;
             }
         }
-    
+}
+
+@media (max-width: 800px) {
+    .footerContainer{
+        .body{
+            h2{
+                span{
+                    font-size: .9rem;
+                }
+            }
+            p{
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .footerContainer{
+        .body{
+            h2{
+                font-size: 1.3rem;
+                span{
+                    font-size: .8rem;
+                }
+            }
+            p{
+                font-size: .7rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .footerContainer{
+        .body{
+            flex-direction: column;
+            height: 100%;
+            h2{
+                font-size: 1rem;
+                span{
+                    font-size: .7rem;
+                }
+            }
+            p{
+                font-size: .65rem;
+            }
+        }
+    }
 }
