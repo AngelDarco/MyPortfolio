@@ -5,25 +5,22 @@
     text-align: center;
     border-radius: 40px;
     font-size: 2.5rem;
-    width: 14%;
+    width: 15%;
+    height: 2%;
     padding: 1%;
     display: flex;
     justify-content: space-around;
 
     svg{
-        width: 50%;
+        width: 2.2rem;
         border-radius: 40%;
     }
     
     .dark {
         background-color: var(--dark-color);
-        color: var(--light-color);
-        border-right: 1px solid var(--text-color);
-        
-        background-color: #022c6d;
+        color: var(--light-color);        
+        background-color: #022d6dc9;
         box-shadow: 0 0 10px #022c6d,
-        0 0 20px #022c6d,
-        0 0 30px #022c6d,
         0 0 50px #022c6d;
     
 }
@@ -31,20 +28,18 @@
 .light {
     background-color: var(--light-color);
     color: var(--dark-color);
-    border-left: 1px solid var(--text-color);
 
-        background-color: #ffe600;
+        background-color: #ffe600a6;
         box-shadow: 0 0 10px #ffe600,
-        0 0 20px #ffe600,
-        0 0 30px #ffe600,
-        0 0 50px #ffe600;
-    
+        0 0 50px #ffe600;   
+}
 }
 
+@media (max-width: 420px) {
+.containerDarkMode {
+    width: 35%;
+    font-size: 2rem;
+    width: 25%;
+    height: 2%;
 }
-
-// --light-primary-color: #e0dede;
-// --dark-primary-color: #494848;
-
-// --light-color: #fff;
-// --dark-color: #000;
+}
