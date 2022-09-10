@@ -5,9 +5,11 @@ import Footer from "./pages/body/footer/Footer"
 import Main from "./pages/body/main/Main"
 import Contact from './pages/body/contact/Contact';
 import DarkMode from './pages/body/darkmode/DarkMode';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <DarkMode/>
        <Main/>
@@ -16,6 +18,7 @@ function App() {
        <Contact/>
       <Footer/>
     </div>
+    </BrowserRouter>
   )
 }
 
