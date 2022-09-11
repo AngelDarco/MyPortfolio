@@ -14,7 +14,7 @@ const Proyects = ()=>{
     },[])
 
     return(
-        <div className="containerProyects">
+        <div className="containerProyects" id='proyects'>
             <div className="body">
                 <h1>Some of my Proyects</h1>
                 <Swiper className="cards mySwiper"
