@@ -7,13 +7,11 @@ import { GrClose } from 'react-icons/gr';
 const Header = ()=>{
     const [ showMenu, setShowMenu ] = useState(false);
     const handlerMenu = ()=> setShowMenu(!showMenu);
-    const home = useRef();
-    const header = useRef();
-
+    
     const handlerLinks = (e)=>{
         switch(e.target.innerText){
-            case 'HOME':
-                window.location.href = '#home';
+            case 'observer':
+                window.location.href = '#observer';
             break;
 
             case 'PROYECTS':
@@ -30,25 +28,9 @@ const Header = ()=>{
         }
     }
 
-    (()=>{
-        const caller = (e)=>{
-            const [entry] = e;
-            !entry.isIntersecting ? header.current.classList.add('headerFlow')
-            : header.current.classList.remove('headerFlow')
-        }
-        const options = {
-            root: null,
-            rootMargin: '10%',
-            threshold: 1.0
-        }
-       const observer = new IntersectionObserver(caller,options)
-        home.current && observer.observe(home.current);
-    })();
-
     return(
         <div className="containerHeader">
-
-        <div ref={home} className="body">
+        <div className="body">
         <div className='menu' onClick={handlerMenu}>
                         {
                            showMenu ? <GrClose className='close'/>
@@ -56,7 +38,7 @@ const Header = ()=>{
                         }
                     </div>
 
-            <div ref={header} className={`header ${!showMenu ? 'hide' : ''}`}>
+            <div className={`header ${!showMenu ? 'hide' : ''}`}>
                 <ul>
                 <li onClick={handlerLinks}>Home</li>
                 <li onClick={handlerLinks}>Proyects</li>
