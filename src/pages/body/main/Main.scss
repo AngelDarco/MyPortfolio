@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    
     .body {
         background-color: var(--secondary-color);
         color: var(--text-color);
@@ -16,45 +16,6 @@
         justify-content: space-around;
         flex-direction: row;
         position: relative;
-
-        .menu {
-            display: none;
-            fill: var(--text-color);
-        }
-
-        .header {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            background: none;
-
-            ul {
-                width: 60%;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-
-                li {
-                    list-style: none;
-                    text-transform: uppercase;
-                    &:hover {
-                        border-bottom: 2px solid #3d3a3a;
-                    }
-                }
-            }
-            button {
-                border: none;
-                border-radius: 10px;
-                color: var(--text-color);
-                background-color: var(--primary-color);
-                text-transform: uppercase;
-                padding: 8px 17px;
-            }
-        }
 
         .logo {
             border-radius: 30px;
@@ -112,9 +73,6 @@
         }
     }
 }
-.hide {
-    display: none !important;
-}
 
 @media (max-width: 1000px) {
     .mainContainer {
@@ -139,44 +97,6 @@
         .body {
             flex-direction: column;
             position: relative;
-            .menu {
-                display: flex;
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                font-size: 2rem;
-                z-index: 300;
-
-                svg path {
-                    stroke: var(--text-color);
-                }
-            }
-
-            .header {
-                position: absolute;
-                top: 5%;
-                right: 5%;
-                width: 60%;
-                height: 60%;
-                padding: 5%;
-                z-index: 200;
-                background-color: var(--primary-color);
-                flex-direction: column;
-                ul {
-                    width: 90%;
-                    height: 70%;
-                    justify-content: space-around;
-                    flex-direction: column;
-                    li {
-                        &:hover {
-                            border-bottom: 2px solid #5f5;
-                        }
-                    }
-                }
-                button {
-                    box-shadow: 0 0 10px #5f5;
-                }
-            }
 
             .logo {
                 left: 0%;
@@ -215,16 +135,6 @@
             .logo {
                 width: 55%;
                 height: 60%;
-            }
-        }
-    }
-}
-
-@media (min-width: 800px) {
-    .mainContainer{
-        .body{
-            .header{
-                display: flex !important;
             }
         }
     }
