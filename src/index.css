@@ -9,8 +9,10 @@
   --secondary-color: #fff;
   --text-color: #000;
 
+  --menu-color: #ffffffb7;
+
   --width: 80%;
-  --height: 75%;
+  --height: 80%;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
