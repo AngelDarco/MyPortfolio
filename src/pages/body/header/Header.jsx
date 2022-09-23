@@ -3,7 +3,6 @@ import { useRef, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 
-
 const Header = ()=>{
     const [ showMenu, setShowMenu ] = useState(false);
     const handlerMenu = ()=> setShowMenu(!showMenu);
@@ -25,6 +24,10 @@ const Header = ()=>{
             case 'CONTACT':
                 window.location.href = '#contact';
             break;
+            case 'HIRE ME':
+                window.location.href = '#contact';
+            break;
+            default: break;
         }
     }
 
@@ -45,7 +48,7 @@ const Header = ()=>{
                 <li onClick={handlerLinks}>About me</li>
                 <li onClick={handlerLinks}>Contact</li>
             </ul>
-            <button>Hire Me</button>
+            <button onClick={handlerLinks}>Hire Me</button>
                 </div>
         </div>
         </div>
