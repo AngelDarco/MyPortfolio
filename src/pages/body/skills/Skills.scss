@@ -43,13 +43,49 @@
         }
         }
 
+        .flags{
+            width: 50%;
+            height: 5%;
+            position: absolute;
+            left: 5%;
+            bottom: 7%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            img{
+                width: 1.5rem;
+                border-radius: 50%;
+                margin: 0 2%;
+                box-shadow: 0 0 10px var(--text-color);
+            }
+        }
+
         .span{
             position: absolute;
             right: 5%;
-            bottom: 5%;
+            bottom: 3%;
             padding-top: 5%;
             text-align: end;
         }
+    }
+}
+
+@media (max-width: 800px){
+    .containerSkills{
+        .body{
+            .icons{
+                font-size: 1.5rem;
+
+                div{
+                    span{
+                        font-size: .8rem;
+                        padding: 10% 0;
+                    }
+            }
+            }
+        }
+
     }
 }
 

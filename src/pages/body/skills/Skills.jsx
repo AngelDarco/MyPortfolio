@@ -3,10 +3,14 @@ import {ImHtmlFive} from 'react-icons/im';
 import {SiNodedotjs,SiWebpack,SiVite,SiUnity,SiAdobephotoshop,SiGnubash,SiCss3,SiJavascript,SiPhp,SiPython,SiMysql,SiFirebase,SiVisualstudiocode} from 'react-icons/si';
 import {FaReact,FaSass} from 'react-icons/fa';
 import {FaGitAlt,FaGithub,FaLinux} from 'react-icons/fa';
+import es from '../../../assets/svg/es.svg'; 
+import us from '../../../assets/svg/us.svg'; 
+import br from '../../../assets/svg/br.svg'; 
+import ge from '../../../assets/svg/ge.svg'; 
 
 const About = ()=>{
     return(
-        <div className='containerSkills' >
+        <div className='containerSkills'>
             <div className="body" id='about'>
                 <h1>Skills</h1>
                 <div className="icons">
@@ -91,6 +95,12 @@ const About = ()=>{
 <span>Linux</span>
 </div>
 
+                </div>
+                <div className="flags">
+                    <img  src={es} alt="es.svg" />
+                    <img src={us} alt="us.svg" />
+                    <img src={br} alt="br.svg" />
+                    <img src={ge} alt="ge.svg" />
                 </div>
                 <span className='span'>Angel Darco</span>
             </div>
