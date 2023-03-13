@@ -18,14 +18,14 @@ function App() {
     <div  className="App">
       <DarkMode/>
        <Main/>
-       <div ref={app}></div>
+       <div ref={app} style={{position:'absolute', top:'15%'}} ></div>
       { <GoUp reference={node} /> }
-       <Skills/>
        <About/>
+       <Skills/>
        <Proyects/>
        <Contact/>
       <Footer/>
     </div>
   )
 }
-export default App
+export default App;
