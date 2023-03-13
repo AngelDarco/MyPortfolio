@@ -30,5 +30,21 @@
         "link": "https://github.com/AngelDarco/Css_Netflix_Copia",
         "desc": "Clone of Netflix page",
         "lenguajes": ["▹ html","▹ css","▹ js"]
+    },
+    {
+        "id": 5,
+        "name": "Boutique",
+        "img": "./src/assets/img/web06.jpg",
+        "link": "https://github.com/AngelDarco/TiendaRopa",
+        "desc": "e-commerce with database of users, like and shoping car",
+        "lenguajes": ["▹ html","▹ css","▹ js","▹ php","▹ mysql","▹ sql","▹ webpack"]
+    },
+    {
+        "id": 6,
+        "name": "E-Commerce",
+        "img": "./src/assets/img/web07.jpg",
+        "link": "https://github.com/AngelDarco/Proyecto_Branda",
+        "desc": "E-commerce with database of registration of users, login and shopping car in mysql",
+        "lenguajes": ["▹ html","▹ css","▹ js","▹ node modules","▹ php","▹ mysql","▹ sql","▹ eslint","▹ prettier","▹ webpack"]
     }
 ]
