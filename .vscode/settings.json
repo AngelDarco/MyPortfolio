@@ -1,0 +1,13 @@
+{
+    "liveServer.settings.port": 5501,
+    "editor.wrappingIndent": "indent",
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true 
+    },
+    "eslint.validate": ["javascript"],
+    "editor.wordWrap": "on",
+    "emmet.includeLanguages": {
+        "postcss": "css"
+      }
+}
