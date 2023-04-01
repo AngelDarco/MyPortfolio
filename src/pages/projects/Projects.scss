@@ -6,7 +6,7 @@
     justify-content: center;
 
     .body {
-        width: var(--width);
+        width: var(--width); min-width: var(--min-width);
         height: var(--height);
         background-color: var(--secondary-color);
         color: var(--text-color);
