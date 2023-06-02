@@ -5,7 +5,7 @@
     align-items: end;
     justify-content: center;
     position: absolute;
-    top: 5%;
+    top: 0;
     z-index: 50;
 
     .body {
@@ -105,19 +105,17 @@
                         }
                     }
                 }
-                button {
-                    box-shadow: 0 0 10px #5f5;
-                }
             }
         }
     }
 }
 
-@media (min-width: 800px) {
+
+@media (max-width: 450px) {
     .containerHeader {
         .body {
-            .header {
-                display: flex !important;
+            .menu{
+                right: 0;
             }
         }
     }
