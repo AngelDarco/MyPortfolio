@@ -69,17 +69,18 @@
 
           .about {
             font-size: 0.8rem;
-            padding: 10px;
+            padding: 5px 10px;
             text-align: center;
           }
 
           h5 {
-            padding: 10px;
+            padding: 0 10px;
           }
 
           ul {
             list-style-type: none;
             width: 100%;
+            height: fit-content;
             text-align: center;
             display: flex;
             flex-wrap: wrap;
@@ -87,10 +88,11 @@
             margin: 0;
 
             li {
-              padding: 5px;
+              width: 100%;
+              padding: 0 5px;
               text-align: start;
               font-size: 0.8rem;
-              flex: 1 0 50%;
+              flex: 1 0 30%;
               box-sizing: border-box;
             }
           }
@@ -110,6 +112,7 @@
           z-index: 200;
 
           div {
+            color: #000;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -118,16 +121,7 @@
             font-size: 2rem;
             padding: 0 50px;
 
-            svg {
-              background: rgb(59, 59, 59);
-              background: radial-gradient(
-                circle,
-                rgba(59, 59, 59, 0.5038167938931297) 0%,
-                rgba(0, 0, 0, 0.5) 0%,
-                rgba(255, 255, 255, 0.6977099236641222) 100%
-              );
-              border-radius: 50%;
-            }
+            
 
             .code {
               animation: code 3s infinite ease-in-out;

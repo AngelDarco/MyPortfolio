@@ -11,7 +11,7 @@ const database = [
 		"name": "Clothes Store",
 		"img": img02,
 		"link": "https://github.com/AngelDarco/Web_Page-04",
-		"desc": "Responsive Clothes Store created with ThreeJs models",
+		"description": "Responsive Clothes Store created with ThreeJs models",
 		"lenguajes": ["▹ html","▹ css","▹ js", "▹ React three fiber"]
 	},
 	{
@@ -19,7 +19,7 @@ const database = [
 		"name": "Library",
 		"img": img03,
 		"link": "https://github.com/AngelDarco/FirebaseCrud",
-		"desc": "CRUD in firebase",
+		"description": "CRUD in firebase",
 		"lenguajes": ["▹ html","▹ css","▹ js", "▹ React","▹ sass","▹ firebase"]
 	},
 	{
@@ -27,7 +27,7 @@ const database = [
 		"name": "Test Recruters",
 		"img": img04,
 		"link": "https://github.com/AngelDarco/jobInterviewTest",
-		"desc": "Web page for a job interview in indeed",
+		"description": "Web page for a job interview in indeed",
 		"lenguajes": ["▹ html","▹ css","▹ js"]
 	},
 	{
@@ -35,7 +35,7 @@ const database = [
 		"name": "Netflix Clone",
 		"img": img05,
 		"link": "https://github.com/AngelDarco/Css_Netflix_Copia",
-		"desc": "Clone of Netflix page",
+		"description": "Clone of Netflix page",
 		"lenguajes": ["▹ html","▹ css","▹ js"]
 	},
 	{
@@ -43,7 +43,7 @@ const database = [
 		"name": "Boutique",
 		"img": img06,
 		"link": "https://github.com/AngelDarco/TiendaRopa",
-		"desc": "e-commerce with database of users, like and shoping car",
+		"description": "e-commerce with database of users, like and shoping car",
 		"lenguajes": ["▹ html","▹ css","▹ js","▹ php","▹ mysql","▹ sql","▹ webpack"]
 	},
 	{
@@ -51,7 +51,7 @@ const database = [
 		"name": "E-Commerce",
 		"img": img07,
 		"link": "https://github.com/AngelDarco/Proyecto_Branda",
-		"desc": "E-commerce with database of registration of users, login and shopping car in mysql",
+		"description": "E-commerce with database of registration of users, login and shopping car in mysql",
 		"lenguajes": ["▹ html","▹ css","▹ js","▹ node modules","▹ php","▹ mysql","▹ sql","▹ eslint","▹ prettier","▹ webpack"]
 	}
 ];
