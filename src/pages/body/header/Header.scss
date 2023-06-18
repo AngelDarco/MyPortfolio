@@ -21,6 +21,11 @@
         .menu {
             display: none;
             fill: var(--text-color);
+
+            .close{
+                margin: 10px;
+                margin-right: 30px;
+            }
         }
 
         .header {
