@@ -60,11 +60,15 @@ function Projects() {
                 )}
                 <div className="navigation">
                   <div onClick={() => window.open(res.code)}>
-                    <BiCodeAlt className="code" />
+                    <div className="svg">
+                      <BiCodeAlt className="code" />
+                    </div>
                     <span>code</span>
                   </div>
                   <div onClick={() => window.open(res.browse)}>
-                    <MdOutlineKeyboardDoubleArrowRight className="browse" />
+                    <div className="svg">
+                      <MdOutlineKeyboardDoubleArrowRight className="browse" />
+                    </div>
                     <span>online</span>
                   </div>
                 </div>
