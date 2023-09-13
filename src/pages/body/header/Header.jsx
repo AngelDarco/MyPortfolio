@@ -19,6 +19,10 @@ const Header = () => {
       window.location.href = "#projects";
       break;
 
+    case "SKILLS":
+      window.location.href = "#skills";
+      break;
+
     case "ABOUT ME":
       window.location.href = "#about";
       break;
@@ -26,6 +30,7 @@ const Header = () => {
     case "CONTACT":
       window.location.href = "#contact";
       break;
+
     case "HIRE ME":
       window.location.href = "#contact";
       break;
@@ -66,6 +71,7 @@ const Header = () => {
             <li onClick={handlerLinks}>Home</li>
             <li onClick={handlerLinks}>Projects</li>
             <li onClick={handlerLinks}>About me</li>
+            <li onClick={handlerLinks}>Skills</li>
             <li onClick={handlerLinks}>Contact</li>
           </ul>
           <button onClick={handlerLinks} className="hover-spinner">
