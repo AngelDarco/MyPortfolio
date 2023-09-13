@@ -1,11 +1,11 @@
-import img01 from "../assets/img/web02.png";
-import img02 from "../assets/img/web03.jpg";
-import img03 from "../assets/img/web04.jpg";
-import img04 from "../assets/img/web05.jpg";
-import img05 from "../assets/img/web06.jpg";
-import img06 from "../assets/img/web07.jpg";
-import img07 from "../assets/img/web08.jpg";
-import img08 from "../assets/img/web09.jpg";
+import img01 from "../assets/img/web01.jpg";
+import img02 from "../assets/img/web02.jpg";
+import img03 from "../assets/img/web03.jpg";
+import img04 from "../assets/img/web04.jpg";
+import img05 from "../assets/img/web05.jpg";
+import img06 from "../assets/img/web06.png";
+import img07 from "../assets/img/web07.jpg";
+import img08 from "../assets/img/web08.jpg";
 
 const database = [
   {
