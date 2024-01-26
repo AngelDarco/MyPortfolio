@@ -4,39 +4,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 
 const Header = () => {
-  const [ showMenu, setShowMenu ] = useState(false);
-  const [ showHeader, setShowHeader ] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
   const handlerMenu = () => !showHeader && setShowMenu(!showMenu);
   const menuRef = useRef(null);
 
   const handlerLinks = (e) => {
-    switch (e.target.innerText) {
-    case "observer":
-      window.location.href = "#observer";
-      break;
+    const targetName = e.target.innerText.toLowerCase();
+    const target = document.getElementById(targetName);
 
-    case "PROJECTS":
-      window.location.href = "#projects";
-      break;
-
-    case "SKILLS":
-      window.location.href = "#skills";
-      break;
-
-    case "ABOUT ME":
-      window.location.href = "#about";
-      break;
-
-    case "CONTACT":
-      window.location.href = "#contact";
-      break;
-
-    case "HIRE ME":
-      window.location.href = "#contact";
-      break;
-    default:
-      break;
-    }
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -51,14 +28,14 @@ const Header = () => {
       });
     });
     if (menuRef.current) resize.observe(menuRef.current);
-	
+
     return () => {
       if (menuRef.current) {
         resize.unobserve(menuRef.current);
       }
     };
   }, []);
-  
+
   return (
     <div className="containerHeader" ref={menuRef}>
       <div className="body">
