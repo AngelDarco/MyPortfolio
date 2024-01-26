@@ -1,43 +1,16 @@
-.containerDarkMode {
-    width: 100%;
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: end;
-    padding: 10px 10%;
-        
-    svg {
-        width: 2.3rem;
-        border-radius: 50%;
-        margin: 5px .5rem;
-    }
+header {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--text-color);
 
-    .dark {
-        background-color: var(--dark-color);
-        color: var(--light-color);
-        background-color: #022d6dc9;
-        box-shadow: 0 0 10px #022c6d, 0 0 50px #022c6d;
+  @media (max-width: 420px) {
+    header {
+      font-size: 1.8rem;
+      svg {
+        margin: 5px;
+      }
     }
-
-    .light {
-        background-color: var(--light-color);
-        color: var(--dark-color);
-        background-color: #ffe600a6;
-        box-shadow: 0 0 10px #ffe600, 0 0 50px #ffe600;
-    }
-}
-
-@media (max-width: 800px) {
-    .containerDarkMode{
-        font-size: 2rem;
-        margin-bottom: 25px;
-    }
-}
-
-@media (max-width: 420px) {
-    .containerDarkMode {
-        font-size: 1.8rem;
-        svg{
-            margin: 5px;
-        }
-    }
+  }
 }

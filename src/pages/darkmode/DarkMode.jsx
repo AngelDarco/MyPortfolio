@@ -1,35 +1,38 @@
+import Darkmode from "darco-dark-mode";
 import "./DarkMode.scss";
-import { MdDarkMode, MdOutlineWbSunny } from "react-icons/md";
-import { useState } from "react";
 
-const DarkMode = ()=>{
-	const local = localStorage.getItem("darkmode") || false;
-	const [ darkMode, setDarkMode ] = useState(local);
+const DarkMode = () => {
+  const switchStylesVariables = [
+    {
+      theme: "Light",
+      variables: [
+        "--primary-color",
+        "--secondary-color",
+        "--text-color",
+        "--color",
+      ],
+      values: ["#e0dede", "#fff", "#000", "#ffffffb7"],
+    },
+    {
+      theme: "Dark",
+      variables: [
+        "--primary-color",
+        "--secondary-color",
+        "--text-color",
+        "--menu-color",
+      ],
+      values: ["#303131", "#000", "#fff", "#000000b7"],
+    },
+  ];
 
-	const handlerDarkMode = ()=> {
-		setDarkMode(!darkMode);
-		darkMode
-			? localStorage.setItem("darkmode","light")
-			: localStorage.setItem("darkmode","dark");
-	};
-    
-	if(local === "dark"){
-		document.documentElement.style.setProperty("--primary-color", "#303131");
-		document.documentElement.style.setProperty("--secondary-color", "#000");
-		document.documentElement.style.setProperty("--text-color", "#fff");
-		document.documentElement.style.setProperty("--menu-color", "#000000b7");
-	}else{
-		document.documentElement.style.setProperty("--primary-color", "#e0dede");
-		document.documentElement.style.setProperty("--secondary-color", "#fff");
-		document.documentElement.style.setProperty("--text-color", "#000");
-		document.documentElement.style.setProperty("--menu-color", "#ffffffb7");
-	}
-
-	return(
-		<div className="containerDarkMode" id='home'>
-			<MdDarkMode className={local === "dark" && "dark"} onClick={handlerDarkMode}/>
-			<MdOutlineWbSunny className={local === "light" &&"light"} onClick={handlerDarkMode}/>
-		</div>
-	);
+  return (
+    <header>
+      <Darkmode
+        switchStyles={switchStylesVariables}
+        icons
+        styles={{ mainContainer: { borderColor: "var(--text-color)" } }}
+      />
+    </header>
+  );
 };
 export default DarkMode;
