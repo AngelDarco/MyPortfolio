@@ -1,27 +1,27 @@
-@import './styles/hover-spinner.css';
-*{
+@import "./styles/hover-spinner.css";
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* transition: 0.3s ease-in-out; */
 }
 
 :root {
-  --primary-color: #e0dede;
-  --secondary-color: #fff;
+  --bg-color: rgba(0, 0, 0, 0.4);
+  --bx-shadow: rgba(255, 255, 255, 0.2);
+  --br-color: rgba(255, 255, 255, 0.2);
   --text-color: #000;
 
-  --menu-color: #ffffffb7;
+  --bg-menu-color: #464141ab;
 
   --width: 80%;
   --height: 80%;
+  --max-width: 900px;
+  --header-height: 70px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-li, button, svg{
-  cursor: pointer;
 }
