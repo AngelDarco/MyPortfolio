@@ -2,24 +2,18 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
   extends: ["eslint:recommended", "plugin:react/recommended", "prettier"],
   overrides: [],
   parserOptions: {
     ecmaVersion: "latest",
-    sourceType: "module",
+    sourceType: "module"
   },
   plugins: ["react"],
   rules: {
     "react/react-in-jsx-scope": "off",
     semi: ["error", "always"],
-    "array-bracket-spacing": ["error", "always"],
-  },
-  overrides: {
-    rules: {
-      "array-bracket-spacing": ["error", "always"],
-      // ... other rules}
-    },
-  },
+    "comma-dangle": ["error", "never"]
+  }
 };
