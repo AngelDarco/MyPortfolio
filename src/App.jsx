@@ -1,4 +1,3 @@
-import "./App.css";
 import Proyects from "./pages/projects/Projects";
 import About from "./pages/body/about/About";
 import Footer from "./pages/body/footer/Footer";
