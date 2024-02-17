@@ -1,0 +1,20 @@
+.containers {
+  /* From https://css.glass */
+  background-color: var(--bg-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px var(--bx-shadow);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--br-color);
+
+  width: var(--width);
+  max-width: var(--max-width);
+  height: var(--height);
+  min-height: 100vh;
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
