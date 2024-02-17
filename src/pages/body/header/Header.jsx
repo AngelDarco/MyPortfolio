@@ -1,49 +1,67 @@
 import "./Header.scss";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
+import resizeObeserver from "../../../utils/resizeObserver";
+import DarkMode from "../../darkmode/DarkMode";
 
-const Header = () => {
-  const [showMenu, setShowMenu] = useState(false);
+const Header = ({ headerObserver }) => {
+  const [showMenu, setShowMenu] = useState(true);
   const [showHeader, setShowHeader] = useState(true);
-  const handlerMenu = () => !showHeader && setShowMenu(!showMenu);
-  const menuRef = useRef(null);
+
+  const handlerMenu = () => {
+    setShowMenu(!showMenu);
+    setShowHeader(!showHeader);
+  };
 
   const handlerLinks = (e) => {
-    const targetName = e.target.innerText.toLowerCase();
-    const target = document.getElementById(targetName);
+    let targetName = e.target.innerText.toLowerCase();
 
-    if (target) target.scrollIntoView({ behavior: "smooth" });
+    if (targetName === "hire me") {
+      targetName = "contact";
+    } else if (targetName === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const target = document.getElementById(targetName);
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const resizeheader = (innerWidth) => {
+    if (innerWidth >= 800) {
+      setShowMenu(true);
+      setShowHeader(true);
+    } else {
+      setShowMenu(false);
+      setShowHeader(false);
+    }
   };
 
   useEffect(() => {
-    const resize = new ResizeObserver((entries) => {
-      entries.forEach((entry) => {
-        const { width } = entry.contentRect;
-        if (width >= 800) {
-          setShowHeader(true);
-        } else {
-          setShowHeader(false);
-        }
-      });
-    });
-    if (menuRef.current) resize.observe(menuRef.current);
-
+    const observer = new resizeObeserver();
+    const fn = observer.observer(window, resizeheader);
     return () => {
-      if (menuRef.current) {
-        resize.unobserve(menuRef.current);
-      }
+      observer.unmount(window, fn);
     };
   }, []);
 
   return (
-    <div className="containerHeader" ref={menuRef}>
-      <div className="body">
-        <div className="menu" onClick={handlerMenu}>
-          {showMenu ? <GrClose className="close" /> : <GiHamburgerMenu />}
+    <div
+      className={`containerHeader ${!headerObserver ? "containerOnScroll" : ""}`}
+      id="home"
+    >
+      <section className="header">
+        {/* switch menu and close icon */}
+        <div className="icons" onClick={handlerMenu}>
+          {showMenu ? (
+            <GrClose className="close" />
+          ) : (
+            <GiHamburgerMenu className="menu" />
+          )}
         </div>
 
-        <div className={`header ${showMenu || showHeader ? "" : "hide"}`}>
+        {/* show the menu */}
+        <div className={`links ${showMenu && showHeader ? "" : "hide"}`}>
           <ul>
             <li onClick={handlerLinks}>Home</li>
             <li onClick={handlerLinks}>Projects</li>
@@ -55,7 +73,10 @@ const Header = () => {
             Hire Me
           </button>
         </div>
-      </div>
+      </section>
+      <section className="darkmode">
+        <DarkMode />
+      </section>
     </div>
   );
 };

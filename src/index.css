@@ -7,8 +7,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* transition: 0.3s ease-in-out; */
-  font-family: Playfair Display, serif;
+  font-family:
+    Playfair Display,
+    serif;
 }
 
 :root {
@@ -17,7 +18,7 @@
   --br-color: rgba(255, 255, 255, 0.2);
   --text-color: #000;
 
-  --bg-menu-color: #464141ab;
+  --bg-menu-color: #000000c1;
 
   --width: 80%;
   --height: 80%;
