@@ -2,9 +2,7 @@
 import { Resend } from "resend";
 
 export async function POST(request) {
-  const NEXT_PUBLIC_RESEND_API_KEY = "re_9gxxTLem_BumgzGoQjEL36LBJCVWHGNiv";
-
-  const resend = new Resend(NEXT_PUBLIC_RESEND_API_KEY);
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     const { name, subject, email, message } = await request.json();
@@ -59,17 +57,16 @@ export async function POST(request) {
           </span>
         </body>
         </html>  
-      `,
+      `
     });
 
     console.log(data);
 
-    if (error) return new Response(error, { headers });
-    return new Response(JSON.stringify(data), { headers });
+    if (error) return new Response(error);
+    return new Response(JSON.stringify(data));
   } catch (error) {
     return new Response("Error processing the request", {
-      status: 500,
-      headers,
+      status: 500
     });
   }
 }
