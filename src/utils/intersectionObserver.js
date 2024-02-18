@@ -18,8 +18,8 @@ const intersectionObserver = {
     return obv;
   },
 
-  unmount: (observer, obv) => {
-    obv.unobserve(observer);
+  unmount: (container, observer) => {
+    observer.unobserve(container);
   }
 };
 export default intersectionObserver;
