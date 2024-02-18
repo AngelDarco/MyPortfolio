@@ -1,5 +1,4 @@
 .containers {
-  /* From https://css.glass */
   background-color: var(--bg-color);
   border-radius: 16px;
   box-shadow: 0 4px 30px var(--bx-shadow);
@@ -17,4 +16,27 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  padding: 4rem 2rem;
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    padding-bottom: 1rem;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    --width: 90%;
+    padding: 3rem 1.5rem;
+
+    @media (max-width: 420px) {
+      --width: 94%;
+      padding: 2rem 1rem;
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
