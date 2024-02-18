@@ -6,34 +6,34 @@ import resizeObeserver from "../../../utils/resizeObserver";
 import DarkMode from "../../darkmode/DarkMode";
 
 const Header = ({ headerObserver }) => {
-  const [showMenu, setShowMenu] = useState(true);
-  const [showHeader, setShowHeader] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
+  const [showLinks, setShowLinks] = useState(false);
 
   const handlerMenu = () => {
     setShowMenu(!showMenu);
-    setShowHeader(!showHeader);
+    setShowLinks(!showLinks);
   };
 
   const handlerLinks = (e) => {
     let targetName = e.target.innerText.toLowerCase();
 
-    if (targetName === "hire me") {
-      targetName = "contact";
-    } else if (targetName === "home") {
+    if (targetName === "hire me") targetName = "contact";
+    else if (targetName === "home")
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const target = document.getElementById(targetName);
-      if (target) target.scrollIntoView({ behavior: "smooth" });
-    }
+
+    const target = document.getElementById(targetName);
+    if (target) target.scrollIntoView({ behavior: "smooth" });
+
+    handlerMenu();
   };
 
   const resizeheader = (innerWidth) => {
     if (innerWidth >= 800) {
       setShowMenu(true);
-      setShowHeader(true);
+      setShowLinks(true);
     } else {
       setShowMenu(false);
-      setShowHeader(false);
+      setShowLinks(false);
     }
   };
 
@@ -61,7 +61,7 @@ const Header = ({ headerObserver }) => {
         </div>
 
         {/* show the menu */}
-        <div className={`links ${showMenu && showHeader ? "" : "hide"}`}>
+        <div className={`links ${showMenu && showLinks ? "" : "hide"}`}>
           <ul>
             <li onClick={handlerLinks}>Home</li>
             <li onClick={handlerLinks}>Projects</li>
