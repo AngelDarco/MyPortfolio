@@ -13,54 +13,42 @@ export async function POST(request) {
       subject: subject,
       html: `
       <html>
-      <style>
-        body{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          width: 100%;
-          height: 100dvh;
-          flex-direction: column;
-          gap: 20px;
-          outline: 1px solid #0F0;
-          background-color: #333;
-          color: white;
-          position: relative;
-        }
-        h3{
-          color:orangered
-        }
-        span{
-          color: purple; 
-          position: absolute; 
-          bottom: 20px;
-          left: 20px
-        }
-      </styles>
-      <body>
-      <h3>
+  <body style="background-color: #00000083; color: white; font-family: Arial, sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <h3 style="margin-bottom: 10px;">
             <i>Subject: </i>${subject}
           </h3>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding: 10px;">
           <p>
             <strong>
               <i>Message from: </i>
               ${name}
-            </strong><br/>
+            </strong><br />
             ${message}
           </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: left; padding: 10px;">
           <span>
             <strong>
               <i>From:</i>
             </strong>
             ${email}
           </span>
-        </body>
-        </html>  
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
       `
     });
-
-    console.log(data);
 
     if (error) return new Response(error);
     return new Response(JSON.stringify(data));
