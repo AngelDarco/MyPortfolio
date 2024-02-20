@@ -1,0 +1,17 @@
+.containerGoUp {
+  position: fixed;
+  top: 90%;
+  left: 3rem;
+  z-index: 200;
+
+  .body {
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: #b07ee1;
+  }
+}
+@media (max-width: 500px) {
+  .containerGoUp {
+    left: 1rem;
+  }
+}
