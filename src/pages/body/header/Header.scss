@@ -150,6 +150,7 @@
 .containerOnScroll {
   top: 0;
   width: 100%;
+  max-width: 100%;
   padding-right: 50px;
   animation: fade 1s forwards;
 }

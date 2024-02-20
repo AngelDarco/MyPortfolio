@@ -5,9 +5,10 @@ import { GrClose } from "react-icons/gr";
 import resizeObeserver from "../../../utils/resizeObserver";
 import DarkMode from "../../darkmode/DarkMode";
 
-const Header = ({ headerObserver }) => {
+const Header = ({ headerObserver, isDark }) => {
   const [showMenu, setShowMenu] = useState(false);
-  const [showLinks, setShowLinks] = useState(false);
+  const [showLinks, setShowLinks] = useState(true);
+  const [responsive, setResponsive] = useState(false);
 
   const handlerMenu = () => {
     setShowMenu(!showMenu);
@@ -28,16 +29,12 @@ const Header = ({ headerObserver }) => {
   };
 
   const resizeheader = (innerWidth) => {
-    if (innerWidth >= 800) {
-      setShowMenu(true);
-      setShowLinks(true);
-    } else {
-      setShowMenu(false);
-      setShowLinks(false);
-    }
+    if (innerWidth <= 800) setResponsive(true);
+    else setResponsive(false);
   };
 
   useEffect(() => {
+    resizeheader(window.innerWidth);
     const observer = new resizeObeserver();
     const fn = observer.observer(window, resizeheader);
     return () => {
@@ -60,8 +57,10 @@ const Header = ({ headerObserver }) => {
           )}
         </div>
 
-        {/* show the menu */}
-        <div className={`links ${showMenu && showLinks ? "" : "hide"}`}>
+        {/* show the links */}
+        <div
+          className={`links ${showMenu || (showLinks && !responsive) ? "" : "hide"}`}
+        >
           <ul>
             <li onClick={handlerLinks}>Home</li>
             <li onClick={handlerLinks}>Projects</li>
@@ -75,7 +74,7 @@ const Header = ({ headerObserver }) => {
         </div>
       </section>
       <section className="darkmode">
-        <DarkMode />
+        <DarkMode isDark={isDark} />
       </section>
     </div>
   );
