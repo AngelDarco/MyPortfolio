@@ -1,0 +1,35 @@
+.loaderContainer {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    div {
+      width: 10px;
+      height: 10px;
+      margin: 5px;
+      border-radius: 50%;
+      background-color: red;
+      opacity: 0;
+
+      &:first-child {
+        margin-left: 1rem;
+        animation: opacity 3s ease infinite;
+      }
+      &:last-child {
+        animation: opacity 1s ease infinite;
+      }
+    }
+    #dot {
+      opacity: 1;
+      animation: opacity 2s ease infinite;
+    }
+  }
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
