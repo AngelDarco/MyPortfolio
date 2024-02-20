@@ -1,75 +1,77 @@
-.footerContainer{
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
+.footerContainer {
+  min-height: 15vh;
+  min-width: 100%;
+  margin-top: 5%;
+  padding: 2%;
+  border-radius: 0;
+  border: none;
 
-        .body{
-            width: var(--width);
-            height: 90%;
-            padding: 2%;
-            color: var(--text-color);
-            
-            h2{
-                span{
-                    padding-left: 2%;
-                    font-size: 1rem;
-                    font-weight: 500;
-                }
-            }
-            p{
-                text-align: end;
-            }
-        }
+  h2 {
+    width: 100%;
+    padding-left: 90px;
+
+    span {
+      padding-left: 2%;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+  p {
+    text-align: end;
+  }
 }
 
 @media (max-width: 800px) {
-    .footerContainer{
-        .body{
-            h2{
-                span{
-                    font-size: .9rem;
-                }
-            }
-            p{
-                font-size: .8rem;
-            }
-        }
+  .footerContainer {
+    h2 {
+      span {
+        font-size: 0.9rem;
+      }
     }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footerContainer {
+    h2 {
+      padding-left: 50px;
+    }
+  }
 }
 
 @media (max-width: 420px) {
-    .footerContainer{
-        .body{
-            h2{
-                font-size: 1.3rem;
-                span{
-                    font-size: .8rem;
-                }
-            }
-            p{
-                font-size: .7rem;
-            }
-        }
+  .footerContainer {
+    h2 {
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 0.8rem;
+      }
     }
+    p {
+      font-size: 0.7rem;
+      padding: 0.5rem 0;
+      padding-left: 5rem;
+    }
+  }
 }
 
 @media (max-width: 350px) {
-    .footerContainer{
-        .body{
-            flex-direction: column;
-            height: 100%;
-            h2{
-                font-size: 1rem;
-                span{
-                    font-size: .7rem;
-                }
-            }
-            p{
-                font-size: .65rem;
-            }
-        }
+  .footerContainer {
+    flex-direction: column;
+    height: 100%;
+    h2 {
+      font-size: 1rem;
+      span {
+        font-size: 0.7rem;
+      }
     }
+    p {
+      font-size: 0.65rem;
+    }
+  }
 }
