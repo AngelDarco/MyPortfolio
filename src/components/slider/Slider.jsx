@@ -1,11 +1,9 @@
-/* eslint-disable react/prop-types */
 import "./Slider.scss";
 import CarouselSlider from "../../utils/carouselSlider";
 import { useEffect, useRef } from "react";
-/**
- * @param {{}[]} data
- */
-export default function Slider({ data }) {
+import { CursorsStyles } from "darco-cursors";
+
+export default function Slider({ data, section }) {
   const carouselRef = useRef();
 
   useEffect(() => {
@@ -15,7 +13,10 @@ export default function Slider({ data }) {
   return (
     <div className="carousel" ref={carouselRef}>
       <div className="carousel__nav">
-        <span id="moveLeft" className="carousel__arrow">
+        <span
+          id="moveLeft"
+          className={`carousel__arrow ${CursorsStyles.pointer}`}
+        >
           <svg
             className="carousel__icon"
             width="24"
@@ -25,7 +26,10 @@ export default function Slider({ data }) {
             <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
           </svg>
         </span>
-        <span id="moveRight" className="carousel__arrow">
+        <span
+          id="moveRight"
+          className={`carousel__arrow ${CursorsStyles.pointer}`}
+        >
           <svg
             className="carousel__icon"
             width="24"
@@ -46,27 +50,27 @@ export default function Slider({ data }) {
             ></div>
             <div className="carousel-item__info">
               <div className="carousel-item__container">
-                <h2 className="carousel-item__subtitle">Web Apps </h2>
+                <h2 className="carousel-item__subtitle">{section} </h2>
                 <h1 className="carousel-item__title">{item.name}</h1>
                 <p className="carousel-item__description">{item.description}</p>
-                <div className="links">
-                  <a
-                    href={item.browse}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="carousel-item__btn"
-                  >
-                    demo
-                  </a>
-                  <a
-                    href={item.code}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="carousel-item__btn"
-                  >
-                    code
-                  </a>
-                </div>
+              </div>
+              <div className="links">
+                <a
+                  href={item.browse}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`carousel-item__btn ${CursorsStyles.pointer}`}
+                >
+                  demo
+                </a>
+                <a
+                  href={item.code}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`carousel-item__btn ${CursorsStyles.pointer}`}
+                >
+                  code
+                </a>
               </div>
             </div>
           </div>
