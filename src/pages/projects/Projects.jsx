@@ -1,83 +1,68 @@
 import "./Projects.scss";
-import "swiper/css";
-import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
-import { BiCodeAlt } from "react-icons/bi";
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-import database from "../../database/database";
+import global from "../../global.module.css";
 
-function Projects() {
-  const [ data, setData ] = useState();
+import { FaCode, FaLaptopCode, FaArrowLeft } from "react-icons/fa";
+import { ImNpm } from "react-icons/im";
+import { useEffect, useRef, useState } from "react";
+import NpmProjects from "../../components/projects/npm/NpmProjects";
+import WebProjects from "../../components/projects/webs/WebProjects";
+import ContributionsProjects from "../../components/projects/contributions/ContributionsProjects";
+import intersectionObserver from "../../utils/intersectionObserver";
 
-  useEffect(() => { if (database) setData(database);}, []);
+export default function Projects() {
+  const [project, setProject] = useState();
+  const [intersecting, setIntersecting] = useState(true);
+  const projectsRef = useRef();
 
-  // function to add states to each item in the database
-  const handlerState = (id) => {
-    if (!data) return;
-    const i = data.findIndex((obj) => obj.id === id);
-    const arr = [ ...data ];
-    arr[i] = {
-      ...arr[i],
-      isClicked: arr[i].isClicked ? !arr[i].isClicked : true,
-    };
-    setData(arr);
+  const handlerLinks = (e) => {
+    const name = e.currentTarget.getAttribute("name");
+    setProject(name);
   };
 
+  useEffect(() => {
+    if (!projectsRef.current) return;
+
+    const fn = (isIntersecting) => setIntersecting(isIntersecting);
+    const obv = intersectionObserver.observer(projectsRef.current, fn);
+
+    return () => {
+      intersectionObserver.unmount(projectsRef.current, obv);
+    };
+  }, []);
+
   return (
-    <div className="containerProjects" id="projects">
-      <div className="body">
-        <h1>Some of my Projects</h1>
-        <Swiper
-          className="cards mySwiper"
-          autoplay={{
-            delay: 10000,
-            disableOnInteraction: true,
-          }}
-          modules={[ Autoplay ]}
-        >
-          {data?.map((res) => (
-            <SwiperSlide className="mainCard" key={res.id}>
-              <div className="card">
-                <img
-                  src={res.img}
-                  alt={res.name}
-                  onClick={() => handlerState(res.id)}
-                />
-                {!res.isClicked && (
-                  <div className="description">
-                    <h1>{res.name}</h1>
-                    <div className="about">
-                      <span>{res.description}</span>
-                    </div>
-                    <h5>Tecnolgies</h5>
-                    <ul>
-                      {res?.lenguajes?.map((itm) => (
-                        <li key={res.id * Math.random() * 100}>{itm}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                <div className="navigation">
-                  <div onClick={() => window.open(res.code)}>
-                    <div className="svg">
-                      <BiCodeAlt className="code" />
-                    </div>
-                    <span>code</span>
-                  </div>
-                  <div onClick={() => window.open(res.browse)}>
-                    <div className="svg">
-                      <MdOutlineKeyboardDoubleArrowRight className="browse" />
-                    </div>
-                    <span>online</span>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+    <div className={`containerProjects ${global.containers}`} id="projects">
+      <header ref={projectsRef}>
+        {project && <FaArrowLeft onClick={() => setProject()} />}
+        <h1>{project || "Projects"}</h1>
+      </header>
+      {project === "web" ? (
+        <WebProjects />
+      ) : project === "code" ? (
+        <ContributionsProjects />
+      ) : project === "npm" ? (
+        <NpmProjects />
+      ) : (
+        <div className={`all ${intersecting ? "allHover" : ""}`}>
+          <div className="left" name="web" onClick={handlerLinks}>
+            <FaCode />
+            <div className="text">Web Development</div>
+          </div>
+
+          <div className="center">
+            <div className="explainer" name="code" onClick={handlerLinks}>
+              <FaLaptopCode className="icon" />
+              <span>Projects</span>
+            </div>
+            <div className="text">Code</div>
+          </div>
+
+          <div className="right" name="npm" onClick={handlerLinks}>
+            <ImNpm />
+            <div className="text">Npm Packages</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
-export default Projects;
