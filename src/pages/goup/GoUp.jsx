@@ -6,14 +6,10 @@ import intersectionObserver from "../../utils/intersectionObserver";
 const GoUp = ({ reference }) => {
   const [show, setShow] = useState(true);
 
-  const fn = (event) => {
-    setShow(event);
-  };
-
   useEffect(() => {
     let obv = null;
     if (reference instanceof HTMLElement)
-      obv = intersectionObserver.observer(reference, fn);
+      obv = intersectionObserver.observer(reference, setShow);
     return () => {
       if (obv) intersectionObserver.unmount(reference, obv);
     };
