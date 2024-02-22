@@ -4,6 +4,9 @@ public
 .firebase
 .github
 package-lock.json
+.vercel
+.env
+.env.local
 
 # Editor directories and files
 !.vscode/extensions.json

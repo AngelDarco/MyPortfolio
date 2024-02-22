@@ -1,47 +1,31 @@
-import { useState } from "react";
+import "./GoUp.scss";
+import { useEffect, useState } from "react";
 import { BsArrowUpCircle } from "react-icons/bs";
+import intersectionObserver from "../../utils/intersectionObserver";
 
-const GoUp = ({ reference, container }) => {
+const GoUp = ({ reference }) => {
   const [show, setShow] = useState(true);
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1.0,
-  };
-  const observer = new IntersectionObserver((e) => {
-    setShow(e[0].isIntersecting);
-  }, options);
-  reference && observer.observe(reference);
+
+  useEffect(() => {
+    let obv = null;
+    if (reference instanceof HTMLElement)
+      obv = intersectionObserver.observer(reference, setShow);
+    return () => {
+      if (obv) intersectionObserver.unmount(reference, obv);
+    };
+  }, [reference]);
 
   const scrollToTop = () => {
-    if (container) container.scrollIntoView({ behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.body}>
-        {!show && (
-          <BsArrowUpCircle onClick={scrollToTop} style={styles.arrow} />
-        )}
+    <div className="containerGoUp">
+      <div className="body" onClick={scrollToTop}>
+        {!show && <BsArrowUpCircle className="arrow" />}
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    width: "100%",
-    height: "10vh",
-    position: "fixed",
-    top: "90%",
-    zIndex: "200",
-  },
-  body: {
-    borderRadius: "50%",
-    color: "var(--text-color)",
-    fontSize: "2.5rem",
-    padding: "0 5%",
-  },
 };
 
 export default GoUp;

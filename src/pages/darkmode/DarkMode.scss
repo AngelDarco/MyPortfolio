@@ -1,16 +1,12 @@
 header {
-  width: 100%;
-  padding: 0.5rem 2rem;
   display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
   justify-content: flex-end;
-  color: var(--text-color);
-
-  @media (max-width: 420px) {
-    header {
-      font-size: 1.8rem;
-      svg {
-        margin: 5px;
-      }
-    }
+}
+@media (max-width: 420px) {
+  header {
+    padding: 0;
   }
 }

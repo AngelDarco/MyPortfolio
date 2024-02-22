@@ -1,51 +1,59 @@
-/* eslint-disable react/no-unescaped-entities */
 import "./About.scss";
+import global from "../../../global.module.css";
 const About = () => {
   return (
-    <div className="containerAbout">
-      <div className="body" id="about me">
-        <h1>About me</h1>
-        <div className="aboutText">
-          <ul>
-            <li>Hi there, Angel here, I am 29 years old, and I'm from Peru.</li>
-            <li>
-              I met the world of computing, at 12 years old, since then, I could
-              never leave it.
-            </li>
-            <li>
-              Like any young person who starts in this beautiful world, I took
-              my first steps in the world of hacking.
-            </li>
-            <li>
-              The more I knew, the more problems I got into, so I started with
-              design, editing and 3d modeling, but knowing how to use programs
-              did not make me very happy, since I always wanted to be the one
-              who creates the programs and not the one who pays to use them.
-            </li>
-            <li>
-              This led me to the world of programming, I took my first steps
-              with Java, C# and Python. But Javascript was the language that
-              captivated me, due to its extensive architecture, frameworks, the
-              other languages with which it complements itself, the large number
-              of projects you can create, and the large community it has, and
-              with which you can learn, teach and compete.
-            </li>
-            <li>
-              I have never thought of coding for money, more than 50 hours per
-              week and it's always for fun, I don't have a degree either, I
-              dropped out of university because I felt they were wasting my
-              time, teaching me things that I wasn't intersted, but I never stop
-              to learn for myself.
-            </li>
-            <li>
-              Finally, if you need help with a project or homework, feel free to
-              contact me, don't worry, I do it for free, just give me some real
-              challenges.
-            </li>
-          </ul>
-          <span style={{ textAlign: "end" }}>Thanks for read</span>
-        </div>
-      </div>
+    <div className={`containerAbout ${global.containers}`} id="about me">
+      <h1>About Me</h1>
+      <section>
+        <p>
+          Greetings! I&apos;m Angel, a 29-year-old self-taught programmer
+          hailing from Peru. My love affair with the world of computing began at
+          the age of 12, and since then, it has been a relentless journey of
+          exploration and growth.
+        </p>
+
+        <p>
+          In my early years, I delved into the realm of hacking, quickly
+          realizing the need for a more constructive path. Transitioning to
+          design, editing, and 3D modeling allowed me to express creativity, yet
+          I yearned to be the architect behind the tools, not just a user.
+        </p>
+
+        <p>
+          This quest led me to programming, where I took my first strides in
+          languages like Java, C#, and Python. However, it was Javascript that
+          truly captured my imagination. Its expansive architecture, diverse
+          frameworks, collaborative nature with other languages, and the vibrant
+          community that surrounds it became my passion.
+        </p>
+
+        <p>
+          What sets me apart is my unwavering commitment to programming,
+          dedicating over 50 hours weekly not for monetary gain, but for the
+          sheer joy of creation. Despite not possessing a formal degree – I
+          chose to drop out of university due to a misalignment with my learning
+          goals – my pursuit of knowledge has never waned.
+        </p>
+
+        <p>
+          I believe in continuous self-improvement, choosing to learn and adapt
+          independently. If you&apos;re in need of assistance with a project or
+          looking for someone passionate about tackling real challenges,
+          I&apos;m here for you. Feel free to reach out; I offer my expertise
+          not for a fee but for the satisfaction of overcoming meaningful
+          hurdles.
+        </p>
+
+        <p>
+          Thank you for taking the time to learn a bit about me. Let&apos;s
+          connect and create something amazing together.
+          <a href="#contact">
+            <i>Leave a message, Don&apos;t be shy</i>
+          </a>
+        </p>
+      </section>
+
+      {/* </div> */}
     </div>
   );
 };
