@@ -1,5 +1,5 @@
 .App {
-  background-color: #0000007a;
+  background-color: #fff;
   padding-top: calc(var(--header-height) - 4rem);
   width: 100%;
   display: flex;

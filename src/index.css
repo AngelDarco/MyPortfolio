@@ -25,6 +25,8 @@
   --max-width: 900px;
   --header-height: 70px;
 
+  --upBtn-color: #b07ee1;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
