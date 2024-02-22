@@ -18,30 +18,33 @@ function App() {
   const canvasRef = useRef();
 
   const [observer, setObserver] = useState();
+  const [darkTheme, setDarkTheme] = useState("");
   const [headerObserver, setHeaderObserver] = useState(false);
 
   useEffect(() => {
     if (observerRef.current) setObserver(observerRef.current);
 
-    const fn = (isObserved) => {
-      setHeaderObserver(isObserved);
-    };
     let obv = null;
-    if (observer) obv = intersectionObserver.observer(observer, fn);
+    if (observer)
+      obv = intersectionObserver.observer(observer, setHeaderObserver);
     return () => {
       if (observer && obv) intersectionObserver.unmount(observer, obv);
     };
-  }, [observerRef.current]);
+  }, []);
 
   useEffect(() => {
-    if (canvasRef.current) Particles();
-  }, [canvasRef.current]);
+    if (canvasRef.current) Particles(darkTheme);
+  }, [darkTheme]);
+
+  const handlerDarkState = (isDark) => {
+    setDarkTheme(isDark === "Dark");
+  };
 
   return (
     <Cursors>
       <div id="WebGL-output" ref={canvasRef} className={styles.canvas} />
       <div className={styles.App}>
-        <Header headerObserver={headerObserver} />
+        <Header headerObserver={headerObserver} isDark={handlerDarkState} />
         <div ref={observerRef} style={{ width: "100%" }} />
         <Main />
         <GoUp reference={observer && observer} />
