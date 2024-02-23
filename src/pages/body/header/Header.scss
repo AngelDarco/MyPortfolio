@@ -7,6 +7,8 @@
   padding: 0 1rem;
   gap: 1rem;
 
+  animation: show 1s forwards;
+
   background-color: var(--bg-color);
   box-shadow: 0 4px 30px var(--bx-shadow);
   backdrop-filter: blur(8px);
@@ -161,5 +163,16 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

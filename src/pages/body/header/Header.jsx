@@ -38,7 +38,7 @@ const Header = ({ headerObserver, isDark }) => {
     const observer = new resizeObeserver();
     const fn = observer.observer(window, resizeheader);
     return () => {
-      observer.unmount(window, fn);
+      if (fn) observer.unmount(window, fn);
     };
   }, []);
 
@@ -59,7 +59,7 @@ const Header = ({ headerObserver, isDark }) => {
 
         {/* show the links */}
         <div
-          className={`links ${showMenu || (showLinks && !responsive) ? "" : "hide"}`}
+          className={`links ${showMenu || (showLinks && !responsive) ? "show" : "hide"}`}
         >
           <ul>
             <li onClick={handlerLinks}>Home</li>
