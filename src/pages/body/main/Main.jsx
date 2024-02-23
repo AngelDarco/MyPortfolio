@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import "./Main.scss";
 import logo from "../../../assets/img/owner.png";
 import Typewriter from "typewriter-effect/dist/core";
@@ -38,7 +37,7 @@ const Main = () => {
         <h5></h5>
         <i>
           <b>
-            <p>Hi there, I'm Angel and I'm:</p>
+            <p>Hi there, I&apos;m Angel and I&apos;m:</p>
           </b>
         </i>
         <h1>Frontend Developer</h1>
