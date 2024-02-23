@@ -26,6 +26,7 @@ export default function Projects() {
     const obv = intersectionObserver.observer(projectsRef.current, fn);
 
     return () => {
+      if(obv)
       intersectionObserver.unmount(projectsRef.current, obv);
     };
   }, []);

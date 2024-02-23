@@ -1,5 +1,5 @@
 import styles from "./App.module.css";
-import Proyects from "./pages/projects/Projects";
+import Projects from "./pages/projects/Projects";
 import About from "./pages/body/about/About";
 import Footer from "./pages/body/footer/Footer";
 import Main from "./pages/body/main/Main";
@@ -30,7 +30,7 @@ function App() {
     return () => {
       if (observer && obv) intersectionObserver.unmount(observer, obv);
     };
-  }, []);
+  }, [observerRef.current]);
 
   useEffect(() => {
     if (canvasRef.current) Particles(darkTheme);
@@ -44,8 +44,8 @@ function App() {
     <Cursors>
       <div id="WebGL-output" ref={canvasRef} className={styles.canvas} />
       <div className={styles.App}>
-        <Header headerObserver={headerObserver} isDark={handlerDarkState} />
         <div ref={observerRef} style={{ width: "100%" }} />
+        <Header headerObserver={headerObserver} isDark={handlerDarkState} />
         <Main />
         <GoUp reference={observer && observer} />
         <Projects className={styles.App} />
