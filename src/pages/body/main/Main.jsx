@@ -9,19 +9,19 @@ const Main = () => {
   const app = useRef(null);
 
   useEffect(() => {
-    if (app.current !== null) {
+    if (app.current) {
       const typewriter = new Typewriter(app.current, {
         loop: true,
-        delay: 150
+        delay: 50
       });
       typewriter
-        .pauseFor(1000)
+        .pauseFor(500)
         .typeString("<h4>Mid/Level</h4>")
+        .pauseFor(2000)
         .deleteChars(9)
-        .pauseFor(1000)
         .start();
     }
-  }, [app.current]);
+  }, []);
 
   const element = document.querySelectorAll(".js-tilt");
   if (element) {
@@ -37,11 +37,11 @@ const Main = () => {
         <h5></h5>
         <i>
           <b>
-            <p>Hi there, I&apos;m Angel and I&apos;m:</p>
+            <p>Hi there, Angel here, just another great </p>
           </b>
         </i>
         <h1>Frontend Developer</h1>
-        <div ref={app}></div>
+        <div ref={app} className="typewriter"></div>
         <h6></h6>
       </div>
     </div>
