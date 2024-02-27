@@ -13,7 +13,7 @@
 }
 
 :root {
-  --bg-color: rgba(0, 0, 0);
+  --bg-color: rgba(0, 0, 0, 0.4);
   --box-shadow: rgba(255, 255, 255, 0.2);
   --br-color: rgba(255, 255, 255, 0.2);
   --text-color: #000;
