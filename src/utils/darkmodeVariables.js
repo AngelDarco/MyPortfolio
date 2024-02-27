@@ -5,9 +5,10 @@ const darkmodeVariables = [
       "--bg-color",
       "--text-color",
       "--bg-menu-color",
+      "--box-shadow",
       "--upBtn-color"
     ],
-    values: ["rgba(255, 255, 255, 0.3)", "#000", "#ffffffd1", "#b07ee1"]
+    values: ["#fff", "#000", "#ffffffd1", "#00000029", "#b07ee1"]
   },
   {
     theme: "Dark",
@@ -15,9 +16,10 @@ const darkmodeVariables = [
       "--bg-color",
       "--text-color",
       "--bg-menu-color",
+      "--box-shadow",
       "--upBtn-color"
     ],
-    values: ["rgba(0, 0, 0, 0.4)", "#fff", "#000000eb", "#7a19db"]
+    values: ["#000", "#fff", "#000000eb", "#ffffff29", "#7a19db"]
   }
 ];
 

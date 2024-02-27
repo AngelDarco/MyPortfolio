@@ -1,5 +1,5 @@
 .App {
-  background-color: #fff;
+  background-color: var(--bg-color);
   padding-top: calc(var(--header-height) - 4rem);
   width: 100%;
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  width: 2px;
 }
 
 .canvas {
