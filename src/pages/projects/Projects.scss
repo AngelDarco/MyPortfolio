@@ -52,7 +52,7 @@
       box-shadow: 0 0 20px 5px rgba(100, 100, 255, 0.4);
       opacity: 0;
       transition: all 0.3s ease;
-      transition-delay: 1s;
+      transition-delay: 0.5s;
       position: relative;
       background-position: center center;
       background-size: contain;
@@ -118,7 +118,7 @@
 
   .allHover {
     perspective: 1000px;
-    transition: all 1.3s ease-in;
+    transition: all 0.5s ease-in;
     transform: perspective(10000px) rotateX(0deg);
     .text {
       opacity: 1 !important;
