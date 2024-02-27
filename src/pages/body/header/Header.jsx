@@ -5,7 +5,8 @@ import { GrClose } from "react-icons/gr";
 import resizeObeserver from "../../../utils/resizeObserver";
 import DarkMode from "../../darkmode/DarkMode";
 
-const Header = ({ headerObserver, isDark }) => {
+const Header = (props) => {
+  const { headerObserver, isDark } = props;
   const [showMenu, setShowMenu] = useState(false);
   const [showLinks, setShowLinks] = useState(true);
   const [responsive, setResponsive] = useState(false);
@@ -43,7 +44,7 @@ const Header = ({ headerObserver, isDark }) => {
   }, []);
 
   return (
-    <div
+    <section
       className={`containerHeader ${!headerObserver ? "containerOnScroll" : ""}`}
       id="home"
     >
@@ -76,7 +77,7 @@ const Header = ({ headerObserver, isDark }) => {
       <section className="darkmode">
         <DarkMode isDark={isDark} />
       </section>
-    </div>
+    </section>
   );
 };
 export default Header;

@@ -12,9 +12,10 @@ import { useEffect, useRef, useState } from "react";
 
 import intersectionObserver from "./utils/intersectionObserver";
 import Particles from "./particles/Particles";
+import Observer from "./components/observer/Observer";
 
 function App() {
-  const observerRef = useRef();
+  const headerRef = useRef();
   const canvasRef = useRef();
 
   const [observer, setObserver] = useState();
@@ -22,7 +23,7 @@ function App() {
   const [headerObserver, setHeaderObserver] = useState(false);
 
   useEffect(() => {
-    if (observerRef.current) setObserver(observerRef.current);
+    if (headerRef.current) setObserver(headerRef.current);
 
     let obv = null;
     if (observer)
@@ -30,7 +31,7 @@ function App() {
     return () => {
       if (observer && obv) intersectionObserver.unmount(observer, obv);
     };
-  }, [observerRef.current]);
+  }, [headerRef.current]);
 
   useEffect(() => {
     if (canvasRef.current) Particles(darkTheme);
@@ -44,15 +45,16 @@ function App() {
     <Cursors>
       <div id="WebGL-output" ref={canvasRef} className={styles.canvas} />
       <div className={styles.App}>
-        <div ref={observerRef} style={{ width: "100%" }} />
+        <div ref={headerRef} />
         <Header headerObserver={headerObserver} isDark={handlerDarkState} />
-        <Main />
-        <GoUp reference={observer && observer} />
-        <Projects className={styles.App} />
-        <About />
-        <Skills />
-        <Contact />
+
+        <Observer Element={Main} />
+        <Observer Element={Projects} />
+        <Observer Element={Skills} />
+        <Observer Element={About} />
+        <Observer Element={Contact} />
         <Footer />
+        <GoUp reference={observer && observer} />
       </div>
     </Cursors>
   );

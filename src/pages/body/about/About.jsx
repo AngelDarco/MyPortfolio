@@ -1,8 +1,13 @@
 import "./About.scss";
 import global from "../../../global.module.css";
-const About = () => {
+const About = ({ ...props }) => {
   return (
-    <div className={`containerAbout ${global.containers}`} id="about me">
+    <section
+      className={`containerAbout ${global.containers}`}
+      id="about me"
+      ref={props.reference}
+      {...props}
+    >
       <h1>About Me</h1>
       <section>
         <p>
@@ -52,9 +57,7 @@ const About = () => {
           </a>
         </p>
       </section>
-
-      {/* </div> */}
-    </div>
+    </section>
   );
 };
 export default About;

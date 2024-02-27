@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import { VanillaTilt } from "../../../utils/vanilla-tilt.min.js";
 import global from "../../../global.module.css";
 
-const Main = () => {
+const Main = ({ ...props }) => {
   const app = useRef(null);
 
   useEffect(() => {
@@ -29,7 +29,12 @@ const Main = () => {
   }
 
   return (
-    <div className={`mainContainer ${global.containers}`} data-tilt>
+    <section
+      ref={props.reference}
+      {...props}
+      className={`mainContainer ${global.containers}`}
+      data-tilt
+    >
       <div className="logo js-tilt">
         <img src={logo} alt="logo.gif" />
       </div>
@@ -44,7 +49,7 @@ const Main = () => {
         <div ref={app} className="typewriter"></div>
         <h6></h6>
       </div>
-    </div>
+    </section>
   );
 };
 export default Main;

@@ -10,7 +10,7 @@ import Loader from "../../../components/loader/Loader";
 import handlerSendMessages from "../../../utils/handlerSendMessages";
 import { CursorsStyles } from "darco-cursors";
 
-const Contact = () => {
+const Contact = ({ ...props }) => {
   const [message, setMessage] = useState(false);
   const [loader, setLoader] = useState(false);
   const [resMessage, setResMessage] = useState("");
@@ -76,7 +76,11 @@ const Contact = () => {
   }, [message]);
 
   return (
-    <div className={`contactContainer ${global.containers}`}>
+    <section
+      ref={props.reference}
+      {...props}
+      className={`contactContainer ${global.containers}`}
+    >
       <section id="contact">
         <h1 className="section-header">Contact</h1>
         <div className="contact-wrapper">
@@ -218,7 +222,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 export default Contact;

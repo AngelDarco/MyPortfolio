@@ -48,9 +48,14 @@ import us from "../../../assets/svg/us.svg";
 import br from "../../../assets/svg/br.svg";
 import ge from "../../../assets/svg/ge.svg";
 
-const About = () => {
+const About = ({ ...props }) => {
   return (
-    <div className={`containerSkills ${global.containers}`} id="skills">
+    <section
+      {...props}
+      ref={props.reference}
+      className={`containerSkills ${global.containers}`}
+      id="skills"
+    >
       <h1>Skills</h1>
       <div className="icons">
         <div>
@@ -227,7 +232,7 @@ const About = () => {
         <img src={ge} alt="ge.svg" />
       </div>
       <span className="span">Angel Darco</span>
-    </div>
+    </section>
   );
 };
 export default About;
