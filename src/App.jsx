@@ -8,6 +8,7 @@ import Skills from "./pages/body/skills/Skills";
 import GoUp from "./pages/goup/GoUp";
 import Cursors from "darco-cursors";
 import Header from "./pages/body/header/Header";
+import Cards from "./pages/body/cards/Cards";
 import { useEffect, useRef, useState } from "react";
 
 import intersectionObserver from "./utils/intersectionObserver";
@@ -49,6 +50,7 @@ function App() {
         <Header headerObserver={headerObserver} isDark={handlerDarkState} />
 
         <Observer Element={Main} />
+        <Cards />
         <Observer Element={Projects} />
         <Observer Element={Skills} />
         <Observer Element={About} />
