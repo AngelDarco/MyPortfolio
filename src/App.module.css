@@ -9,10 +9,6 @@
   gap: 4rem;
 }
 
-body::-webkit-scrollbar {
-  width: 2px;
-}
-
 .canvas {
   width: 100%;
   height: 100vh;
