@@ -7,9 +7,18 @@ const darkmodeVariables = [
       "--text-color",
       "--bg-menu-color",
       "--box-shadow",
-      "--upBtn-color"
+      "--upBtn-color",
+      "--br-dark-light"
     ],
-    values: ["#fff", "#fff0", "#000", "#ffffffd1", "#00000029", "#b07ee1"]
+    values: [
+      "#fff",
+      "#fff0",
+      "#000",
+      "#ffffffd1",
+      "#00000029",
+      "#b07ee1",
+      "#fff"
+    ]
   },
   {
     theme: "Dark",
@@ -19,9 +28,18 @@ const darkmodeVariables = [
       "--text-color",
       "--bg-menu-color",
       "--box-shadow",
-      "--upBtn-color"
+      "--upBtn-color",
+      "--br-dark-light"
     ],
-    values: ["#000", "#0001", "#fff", "#000000eb", "#ffffff29", "#7a19db"]
+    values: [
+      "#000",
+      "#0001",
+      "#fff",
+      "#000000eb",
+      "#ffffff29",
+      "#7a19db",
+      "#000"
+    ]
   }
 ];
 
