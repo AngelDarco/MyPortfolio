@@ -39,4 +39,117 @@
       }
     }
   }
+
+  /* second card */
+  .secondCard {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-self: center;
+    gap: 1rem;
+
+    .containers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem 0;
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    .main {
+      grid-column: 1/3;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .title {
+        display: flex;
+        justify-content: center;
+        gap: 0 1rem;
+        flex-wrap: wrap;
+
+        .number {
+          display: flex;
+          text-align: center;
+          font-size: 2rem;
+          width: 100px;
+        }
+
+        p:first-child {
+          display: flex;
+          align-items: center;
+        }
+
+        p:last-child {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .languages {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        div {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: end;
+          justify-content: center;
+          padding: 0.2rem;
+
+          &:first-child {
+            svg {
+              scale: 1.2;
+            }
+          }
+        }
+      }
+    }
+
+    .webs {
+      .title {
+        h3 {
+          text-align: center;
+          font-size: 2rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+        p:first-child {
+          margin-bottom: -10px;
+        }
+        p:last-child {
+          text-align: center;
+        }
+      }
+    }
+
+    .repos {
+      p {
+        font-size: 0.9rem;
+      }
+      p:first-child {
+        margin-bottom: -10px;
+      }
+      h3 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      p:last-child {
+        text-align: center;
+      }
+    }
+  }
 }
