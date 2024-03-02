@@ -1,0 +1,13 @@
+.cardsContainer {
+  width: var(--width);
+  // height: var(--heigth);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+
+  overflow: hidden;
+}
