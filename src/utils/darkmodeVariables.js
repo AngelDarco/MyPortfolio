@@ -8,7 +8,7 @@ const darkmodeVariables = [
       "--bg-menu-color",
       "--box-shadow",
       "--upBtn-color",
-      "--br-dark-light"
+      "--bg-dark-light"
     ],
     values: [
       "#fff",
@@ -29,7 +29,7 @@ const darkmodeVariables = [
       "--bg-menu-color",
       "--box-shadow",
       "--upBtn-color",
-      "--br-dark-light"
+      "--bg-dark-light"
     ],
     values: [
       "#000",
