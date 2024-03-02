@@ -231,7 +231,6 @@ const About = ({ ...props }) => {
         <img src={br} alt="br.svg" />
         <img src={ge} alt="ge.svg" />
       </div>
-      <span className="span">Angel Darco</span>
     </section>
   );
 };
