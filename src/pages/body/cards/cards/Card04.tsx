@@ -6,7 +6,7 @@ export default function Card04({ observer }: { observer: boolean }) {
   const textRef = useRef(null);
 
   function writer(container: HTMLDivElement, text: string) {
-    if (!container) return;
+    if (!container || container.innerHTML !== "") return;
     const typewriter = new Typewriter(container, {
       loop: false,
       delay: "5ms",
