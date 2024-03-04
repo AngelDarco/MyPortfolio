@@ -22,7 +22,7 @@ const GoUp = ({ reference }) => {
   return (
     <div className="containerGoUp">
       <div className="body" onClick={scrollToTop}>
-        {!show && <BsArrowUpCircle className="arrow" />}
+        {!show && <BsArrowUpCircle />}
       </div>
     </div>
   );
