@@ -8,7 +8,7 @@ import Skills from "./pages/body/skills/Skills";
 import GoUp from "./pages/goup/GoUp";
 import Cursors from "darco-cursors";
 import Header from "./pages/body/header/Header";
-import Cards from "./pages/body/cards/Cards";
+import CardsContainer from "./pages/body/cards/CardsContainer";
 import { useEffect, useRef, useState } from "react";
 
 import intersectionObserver from "./utils/intersectionObserver";
@@ -35,7 +35,7 @@ function App() {
   }, [headerRef.current]);
 
   useEffect(() => {
-    if (canvasRef.current) Particles(darkTheme);
+    // if (canvasRef.current) Particles(darkTheme);
   }, [darkTheme]);
 
   const handlerDarkState = (isDark) => {
@@ -50,7 +50,7 @@ function App() {
         <Header headerObserver={headerObserver} isDark={handlerDarkState} />
 
         <Observer Element={Main} />
-        <Cards />
+        <CardsContainer />
         <Observer Element={Projects} />
         <Observer Element={Skills} />
         <Observer Element={About} />
