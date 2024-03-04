@@ -11,14 +11,15 @@ import handlerSendMessages from "../../../utils/handlerSendMessages";
 import { CursorsStyles } from "darco-cursors";
 
 const Contact = ({ ...props }) => {
-  const [message, setMessage] = useState(false);
+  const [messageSend, setMessageSend] = useState(false);
   const [loader, setLoader] = useState(false);
-  const [resMessage, setResMessage] = useState("");
+  const [messageResult, setMessageResult] = useState(false);
   const formRef = useRef(null);
 
-  const success =
-    "Hey, thanks for your message!, I will reply as soon as possible";
-  const error = "Something went wrong, please try again later.";
+  const messages = {
+    success: "Hey, thanks for your message!, I will reply as soon as possible",
+    error: "Something went wrong, please try again later."
+  };
 
   const handlerSubmit = (e) => {
     if (!formRef.current) return;
@@ -38,42 +39,38 @@ const Contact = ({ ...props }) => {
 
     setLoader(true);
 
-    // const success =
-    //   "Hey, thanks for your message!, I will reply as soon as possible";
-    // const error = "Something went wrong, please try again later.";
-
     handlerSendMessages(URL, data)
       .then((res) => res.json())
       .then((data) => {
         if (data.id) {
           setLoader(false);
-          setMessage(true);
-          setResMessage(success);
+          setMessageSend(true);
+          setMessageResult(true);
         } else {
-          setResMessage(error);
           setLoader(false);
-          setMessage(true);
+          setMessageSend(true);
+          setMessageResult(false);
           console.error(data);
         }
       })
       .catch((err) => {
-        setResMessage(error);
         setLoader(false);
-        setMessage(true);
+        setMessageSend(true);
+        setMessageResult(false);
         console.error(err);
       });
   };
 
   useEffect(() => {
     let id;
-    if (message) {
+    if (messageSend) {
       id = setTimeout(() => {
-        setMessage(false);
+        setMessageSend(false);
         setLoader(false);
       }, 5000);
     }
     return () => clearTimeout(id);
-  }, [message]);
+  }, [messageSend]);
 
   return (
     <section
@@ -86,12 +83,12 @@ const Contact = ({ ...props }) => {
         <div className="contact-wrapper">
           {/* left side */}
           <div className="form">
-            {loader && !message ? (
+            {loader && !messageSend ? (
               <Loader />
-            ) : !loader && message ? (
+            ) : !loader && messageSend ? (
               <Message
-                type={!message ? "success" : "error"}
-                message={resMessage}
+                type={messageResult ? "success" : "error"}
+                message={messageResult ? messages.success : messages.error}
               />
             ) : (
               <form
@@ -208,9 +205,9 @@ const Contact = ({ ...props }) => {
                 <FaFileAlt />
                 <span className="contact-text gmail">
                   <a
-                    href="https://darcoportfolio.web.app/"
+                    href="https://roxkincxbxsuvs8q.public.blob.vercel-storage.com/AGPresume-Qf9z9N7c3rHvtv9etLMVTIsl7b9S8G.pdf"
                     target="_blank"
-                    title="Send me an email"
+                    title="get my resume"
                     rel="noreferrer"
                   >
                     My Resume
