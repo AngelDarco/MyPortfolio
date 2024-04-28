@@ -1,4 +1,13 @@
 import {
+  adventjs,
+  bash,
+  codeforces,
+  codember,
+  coderbyte,
+  codesignal,
+  onedrive,
+  prettier,
+  vite,
   web01,
   web02,
   web03,
@@ -11,15 +20,13 @@ import {
 
 import npm01 from "../assets/img/npm01.gif";
 
-import code01 from "../assets/img/code01.gif";
-
 const webData = [
   {
     id: 8,
     name: "Youtube Clone",
     img: web08,
     code: "https://github.com/AngelDarco/Css_Youtube_Twin",
-    browse: "https://youtube-twin.up.railway.app/",
+    browse: "https://twin-youtube.netlify.app/",
     description: "A Clone of the Youtube page, with css only, no frameworks",
     languages: ["▹ html", "▹ css", "▹ js"]
   },
@@ -135,17 +142,98 @@ const npmData = [
   }
 ];
 
-const contributionsData = [
+const codeData = [
   {
     id: 1,
+    name: "Codesignal",
+    img: codesignal,
+    code: "https://github.com/AngelDarco/codesignal_challenges",
+    browse: "https://github.com/AngelDarco/codesignal_challenges",
+    description:
+      "Github repository, where I showcase my solutions to a wide array of coding challenges, a curated collection of problems from CodeSignal, meticulously solved and explained.",
+    languages: ["javascript", "typescript", "eslint", "bun"]
+  },
+  {
+    id: 2,
+    name: "Codember",
+    img: codember,
+    code: "https://github.com/AngelDarco/codember_2023/",
+    browse: "https://github.com/AngelDarco/codember_2023/",
+    description:
+      "GitHub repository where I showcase my solutions to a diverse range of coding challenges sourced from Codember, meticulously solved and explained for fellow developers.",
+    languages: ["javascript", "typescript", "eslint", "bun"]
+  },
+  {
+    id: 3,
+    name: "AdventJs",
+    img: adventjs,
+    code: "https://github.com/AngelDarco/advenJs_2023",
+    browse: "https://github.com/AngelDarco/advenJs_2023",
+    description:
+      "GitHub repository, where I present solutions to a myriad of coding challenges from AdventJs, a curated collection, meticulously solved and explained, to elevate problem-solving skills in JavaScript and typescript.",
+    languages: ["javascript", "typescript", "eslint", "bun"]
+  },
+  {
+    id: 4,
+    name: "Over The Wire",
+    img: bash,
+    code: "https://github.com/AngelDarco/over-the-wire_challenges/tree/master",
+    browse:
+      "https://github.com/AngelDarco/over-the-wire_challenges/tree/master",
+    description:
+      "This repository contains solutions to the bash scripting challenges from OverTheWire's wargames, a series of challenges designed to help individuals learn and practice various aspects of cybersecurity, including bash scripting in a Unix-like environment.",
+    languages: ["bash", "vim", "linux"]
+  },
+  {
+    id: 5,
+    name: "Coderbyte",
+    img: coderbyte,
+    code: "https://github.com/AngelDarco/coderbyte_challenges",
+    browse: "https://github.com/AngelDarco/coderbyte_challenges",
+    description:
+      "GitHub repository with solutions to a variety of coding challenges from Coderbyte. a curated collection, meticulously solved and explained, to enhance the problem-solving prowess and master the art of coding.",
+    languages: ["javascript", "typescript", "eslint", "bun"]
+  },
+  {
+    id: 6,
+    name: "CodeForces",
+    img: codeforces,
+    code: "https://github.com/AngelDarco/code-forces_challenges/",
+    browse: "https://github.com/AngelDarco/code-forces_challenges/",
+    description:
+      "GitHub repository featuring solutions to Codeforces challenges with Python. a meticulously crafted solutions to sharpen your problem-solving skills in competitive programming.",
+    languages: ["python", "vim", "linux"]
+  },
+  {
+    id: 7,
     name: "OneDrive",
-    img: code01,
+    img: onedrive,
     code: "https://github.com/AngelDarco/Css_Youtube_Twin",
     browse: "https://youtube-twin.up.railway.app/",
     description:
       "Contribution to debug and fix bugs in the project, main page.",
-    languages: ["react", "typescript"]
+    languages: ["css", "html"]
+  },
+  {
+    id: 8,
+    name: "Prettier",
+    img: prettier,
+    code: "https://github.com/AngelDarco/eslint-config-prettier",
+    browse: "https://github.com/AngelDarco/eslint-config-prettier",
+    description:
+      "Contribution to debug and fix bugs in the project, eslint-config-prettier",
+    languages: ["Markdown", "javascript", "bash"]
+  },
+  {
+    id: 9,
+    name: "Vite-Plugin-Vercel",
+    img: vite,
+    code: "https://github.com/AngelDarco/vite-plugin-vercel",
+    browse: "https://github.com/AngelDarco/vite-plugin-vercel",
+    description:
+      "Contribution to debug and fix bugs in the project, vite-plugin-vercel",
+    languages: ["Markdown", "javascript", "bash"]
   }
 ];
 
-export { webData, npmData, contributionsData };
+export { webData, npmData, codeData };
