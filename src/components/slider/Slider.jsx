@@ -44,10 +44,9 @@ export default function Slider({ data, section }) {
         data.length > 0 &&
         data.map((item) => (
           <div key={item.id} className="carousel-item">
-            <div
-              style={{ backgroundImage: `url(${item.img})` }}
-              className="carousel-item__image"
-            ></div>
+            <div className="carousel-item__image">
+              <img src={item.img} alt={`img-slider-${item.name}`} />
+            </div>
             <div className="carousel-item__info">
               <div className="carousel-item__container">
                 <h2 className="carousel-item__subtitle">{section} </h2>
