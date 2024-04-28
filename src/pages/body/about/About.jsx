@@ -21,7 +21,7 @@ const About = ({ ...props }) => {
       ref={props.reference}
       {...props}
       style={{
-        height: showMore ? "fit-content" : "50dvh"
+        height: showMore && "fit-content"
       }}
     >
       <h1>About Me</h1>
