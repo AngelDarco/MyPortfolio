@@ -14,7 +14,7 @@
     --border-angle: 1turn;
   }
 }
-.hover-spinner:hover {
+.hover-spinner {
   --border-size: 3px;
   --border-angle: 0turn;
   background-image: conic-gradient(
