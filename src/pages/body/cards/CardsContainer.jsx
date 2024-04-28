@@ -13,17 +13,17 @@ export default function Cards() {
 
   useEffect(() => {
     if (!refCard.current) return;
-    const obv = intersectionObserver.observer(refCard.current, setCards);
+    const obv = intersectionObserver.observer(refCard.current, setCards, true);
     return () => {
       if (refCard.current && obv)
         intersectionObserver.unmount(refCard.current, obv);
     };
   }, []);
-
   return (
-    <section ref={refCard} className={`cardsContainer`}>
+    <section ref={refCard} className="cardsContainer">
       <Card01 observer={cards} />
       <Card02 observer={cards} />
+      <Card03 observer={cards} />
       <Card04 observer={cards} />
     </section>
   );
