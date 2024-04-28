@@ -1,15 +1,36 @@
 import "./About.scss";
 import global from "../../../global.module.css";
-const About = () => {
+import arrow_down from "../../../assets/svg/arrow-down.svg";
+import arrow_up from "../../../assets/svg/arrow-up.svg";
+import { useState } from "react";
+const About = ({ ...props }) => {
+  const [showMore, setShowMore] = useState(false);
+
+  const handlerShowMore = () => {
+    setShowMore(!showMore);
+    if (showMore)
+      document
+        .getElementById("about me")
+        .scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className={`containerAbout ${global.containers}`} id="about me">
+    <section
+      className={`containerAbout ${global.containers}`}
+      id="about me"
+      ref={props.reference}
+      {...props}
+      style={{
+        height: showMore ? "fit-content" : "50dvh"
+      }}
+    >
       <h1>About Me</h1>
-      <section>
+      <section style={{ overflow: showMore ? "visible" : "hidden" }}>
         <p>
-          Greetings! I&apos;m Angel, a 29-year-old self-taught programmer
-          hailing from Peru. My love affair with the world of computing began at
-          the age of 12, and since then, it has been a relentless journey of
-          exploration and growth.
+          Greetings!, Angel here, a self-taught programmer hailing from Peru. My
+          love affair with the world of computing began at the age of 12, and
+          since then, it has been a relentless journey of exploration and
+          growth.
         </p>
 
         <p>
@@ -48,13 +69,18 @@ const About = () => {
           Thank you for taking the time to learn a bit about me. Let&apos;s
           connect and create something amazing together.
           <a href="#contact">
-            <i>Leave a message, Don&apos;t be shy</i>
+            <i>Don&apos;t be shy, Leave a message.</i>
           </a>
         </p>
-      </section>
 
-      {/* </div> */}
-    </div>
+        <div className="blur" style={{ display: showMore && "none" }} />
+
+        <button className={showMore ? "down" : "up"} onClick={handlerShowMore}>
+          {!showMore ? "Show more" : "Show less"}
+          <img src={!showMore ? arrow_down : arrow_up} />
+        </button>
+      </section>
+    </section>
   );
 };
 export default About;

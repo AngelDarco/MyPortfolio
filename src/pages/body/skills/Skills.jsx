@@ -30,9 +30,9 @@ import {
   SiTypescript,
   SiNpm
 } from "react-icons/si";
+
 import { LuFileJson2 } from "react-icons/lu";
 import { DiVim } from "react-icons/di";
-
 import { TbBrandThreejs } from "react-icons/tb";
 
 import {
@@ -43,14 +43,32 @@ import {
   FaLinux,
   FaBootstrap
 } from "react-icons/fa";
+
 import es from "../../../assets/svg/es.svg";
 import us from "../../../assets/svg/us.svg";
 import br from "../../../assets/svg/br.svg";
 import ge from "../../../assets/svg/ge.svg";
 
-const About = () => {
+import arrow_down from "../../../assets/svg/arrow-down.svg";
+import arrow_up from "../../../assets/svg/arrow-up.svg";
+
+import { useState } from "react";
+
+const About = ({ ...props }) => {
+  const [showMore, setShowMore] = useState(false);
+  const handlerShowMore = () => {
+    setShowMore(!showMore);
+    if (showMore)
+      document.getElementById("skills").scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <div className={`containerSkills ${global.containers}`} id="skills">
+    <section
+      {...props}
+      ref={props.reference}
+      className={`containerSkills ${global.containers}`}
+      id="skills"
+      style={{ height: showMore && "fit-content" }}
+    >
       <h1>Skills</h1>
       <div className="icons">
         <div>
@@ -226,8 +244,14 @@ const About = () => {
         <img src={br} alt="br.svg" />
         <img src={ge} alt="ge.svg" />
       </div>
-      <span className="span">Angel Darco</span>
-    </div>
+
+      <div className="blur" style={{ display: showMore && "none" }} />
+
+      <button className={showMore ? "down" : "up"} onClick={handlerShowMore}>
+        {!showMore ? "Show more" : "Show less"}
+        <img src={!showMore ? arrow_down : arrow_up} />
+      </button>
+    </section>
   );
 };
 export default About;

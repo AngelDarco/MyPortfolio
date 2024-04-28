@@ -1,5 +1,6 @@
 import "./Projects.scss";
 import global from "../../global.module.css";
+import styles from "../../App.module.css";
 
 import { FaCode, FaLaptopCode, FaArrowLeft } from "react-icons/fa";
 import { ImNpm } from "react-icons/im";
@@ -9,7 +10,7 @@ import WebProjects from "../../components/projects/webs/WebProjects";
 import ContributionsProjects from "../../components/projects/contributions/ContributionsProjects";
 import intersectionObserver from "../../utils/intersectionObserver";
 
-export default function Projects() {
+export default function Projects({ ...props }) {
   const [project, setProject] = useState();
   const [intersecting, setIntersecting] = useState(true);
   const projectsRef = useRef();
@@ -26,12 +27,17 @@ export default function Projects() {
     const obv = intersectionObserver.observer(projectsRef.current, fn);
 
     return () => {
-      intersectionObserver.unmount(projectsRef.current, obv);
+      if (obv) intersectionObserver.unmount(projectsRef.current, obv);
     };
   }, []);
 
   return (
-    <div className={`containerProjects ${global.containers}`} id="projects">
+    <section
+      {...props}
+      ref={props.reference}
+      className={`containerProjects ${global.containers} ${styles.App}`}
+      id="projects"
+    >
       <header ref={projectsRef}>
         {project && <FaArrowLeft onClick={() => setProject()} />}
         <h1>{project || "Projects"}</h1>
@@ -63,6 +69,6 @@ export default function Projects() {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }

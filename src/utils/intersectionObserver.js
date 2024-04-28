@@ -3,15 +3,17 @@ const intersectionObserver = {
    * @param container: HTMLElement
    * @param fn: (isIntersecting: boolean) => void
    */
-  observer: (container, fn) => {
+  observer: (container, fn, once = false) => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 1.0
+      threshold: 0.3
     };
     const obv = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        fn(entry.isIntersecting);
+        if (once) {
+          if (entry.isIntersecting) fn(entry.isIntersecting);
+        } else fn(entry.isIntersecting);
       });
     }, options);
     obv.observe(container);

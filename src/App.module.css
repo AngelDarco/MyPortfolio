@@ -1,5 +1,5 @@
 .App {
-  background-color: #fff;
+  background-color: var(--main-bg-color);
   padding-top: calc(var(--header-height) - 4rem);
   width: 100%;
   display: flex;
@@ -7,10 +7,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 4rem;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 .canvas {

@@ -1,0 +1,216 @@
+.card {
+  // background-image: url(../../../../assets/bg.png);
+  // background-repeat: no-repeat;
+
+  background-color: var(--bg-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px var(--box-shadow);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--br-color);
+
+  min-height: 440px;
+  height: fit-content;
+  width: 310px;
+
+  padding: 0.5rem;
+  color: var(--text-color);
+
+  h1 {
+    text-align: center;
+  }
+
+  /* first card */
+  .firstCard {
+    padding: 2rem 0.5rem;
+
+    article {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.2rem;
+      padding: 0.5rem 0;
+
+      div {
+        display: flex;
+
+        img {
+          position: absolute;
+          top: 50%;
+          bottom: 50%;
+          transform: translate(-100%, -50%);
+        }
+
+        p {
+          position: relative;
+          font-size: 14px;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+
+  /* second card */
+  .secondCard {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-self: center;
+    gap: 3rem;
+
+    .containers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem 0;
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    .main {
+      grid-column: 1/3;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .title {
+        display: flex;
+        justify-content: center;
+        gap: 0 1rem;
+        flex-wrap: wrap;
+
+        .number {
+          display: flex;
+          text-align: center;
+          font-size: 2rem;
+          width: 100px;
+        }
+
+        p:first-child {
+          display: flex;
+          align-items: center;
+        }
+
+        p:last-child {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .languages {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        div {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: end;
+          justify-content: center;
+          padding: 0.2rem;
+
+          &:first-child {
+            svg {
+              scale: 1.2;
+            }
+          }
+        }
+      }
+    }
+
+    .webs {
+      .title {
+        h3 {
+          text-align: center;
+          font-size: 2rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+        p:first-child {
+          margin-bottom: -10px;
+        }
+        p:last-child {
+          text-align: center;
+        }
+      }
+    }
+
+    .repos {
+      p {
+        font-size: 0.9rem;
+      }
+      p:first-child {
+        margin-bottom: -10px;
+      }
+      h3 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      p:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  /* third card */
+  .thirdCard {
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+  }
+
+  /* fourth card */
+  .fourthCard {
+    .text-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+
+      & p {
+        padding: 0.3rem 0;
+        margin-left: 1rem;
+        position: relative;
+        font-size: 12px;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          background-color: #88ff00;
+          position: absolute;
+          top: 35%;
+          left: -16px;
+        }
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 90%;
+        background-color: var(--text-color);
+        position: absolute;
+        top: 5%;
+        left: 5px;
+      }
+    }
+  }
+}

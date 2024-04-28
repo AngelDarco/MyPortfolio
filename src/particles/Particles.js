@@ -17,7 +17,7 @@ export default function Particles(theme) {
   // create a render and set the size
   const webGLRenderer = new THREE.WebGLRenderer();
 
-  const bgColor = theme ? 0xffffff : 0x00000;
+  const bgColor = !theme ? 0xffffff : 0x00000;
   webGLRenderer.setClearColor(new THREE.Color(bgColor)); // White bg color
 
   webGLRenderer.setSize(window.innerWidth, window.innerHeight);

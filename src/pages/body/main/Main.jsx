@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import "./Main.scss";
 import logo from "../../../assets/img/owner.png";
 import Typewriter from "typewriter-effect/dist/core";
@@ -6,23 +5,23 @@ import { useEffect, useRef } from "react";
 import { VanillaTilt } from "../../../utils/vanilla-tilt.min.js";
 import global from "../../../global.module.css";
 
-const Main = () => {
+const Main = ({ ...props }) => {
   const app = useRef(null);
 
   useEffect(() => {
-    if (app.current !== null) {
+    if (app.current) {
       const typewriter = new Typewriter(app.current, {
         loop: true,
-        delay: 150
+        delay: 50
       });
       typewriter
-        .pauseFor(1000)
+        .pauseFor(500)
         .typeString("<h4>Mid/Level</h4>")
+        .pauseFor(2000)
         .deleteChars(9)
-        .pauseFor(1000)
         .start();
     }
-  }, [app.current]);
+  }, []);
 
   const element = document.querySelectorAll(".js-tilt");
   if (element) {
@@ -30,7 +29,12 @@ const Main = () => {
   }
 
   return (
-    <div className={`mainContainer ${global.containers}`} data-tilt>
+    <section
+      ref={props.reference}
+      {...props}
+      className={`mainContainer ${global.containers}`}
+      data-tilt
+    >
       <div className="logo js-tilt">
         <img src={logo} alt="logo.gif" />
       </div>
@@ -38,14 +42,14 @@ const Main = () => {
         <h5></h5>
         <i>
           <b>
-            <p>Hi there, I'm Angel and I'm:</p>
+            <p>Hi there, Angel here, just another great </p>
           </b>
         </i>
         <h1>Frontend Developer</h1>
-        <div ref={app}></div>
+        <div ref={app} className="typewriter"></div>
         <h6></h6>
       </div>
-    </div>
+    </section>
   );
 };
 export default Main;
