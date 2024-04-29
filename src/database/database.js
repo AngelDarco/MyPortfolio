@@ -25,20 +25,24 @@ const webData = [
     id: 8,
     name: "Youtube Clone",
     img: web08,
-    code: "https://github.com/AngelDarco/Css_Youtube_Twin",
+    code: "https://github.com/AngelDarco/twin-youtube",
     browse: "https://twin-youtube.netlify.app/",
-    description: "A Clone of the Youtube page, with css only, no frameworks",
+    description:
+      "Twin-Youtube project, a clone of YouTube, built with HTML, CSS, and JavaScript. Experience the familiar interface and functionalities of YouTube in this project deployed on Netlify.",
     languages: ["▹ html", "▹ css", "▹ js"]
   },
   {
     id: 7,
     name: "Chat app",
     img: web07,
-    code: "https://github.com/AngelDarco/chat-firebase",
-    browse: "https://cozy-semifreddo-c8ba95.netlify.app/",
-    description: "Real time chat app",
+    code: "https://github.com/AngelDarco/chat-app",
+    browse: "https://chat-app-b1911.web.app/",
+    description:
+      "Chat app, real time messaging app, where I utilized React and TypeScript to build a robust front-end interface. Leveraging React Router, users can navigate seamlessly, while Firebase handles real-time data synchronization and user authentication. To ensure code quality, I integrated ESLint for linting and Vite for efficient development. Post-CSS adds styling flexibility, resulting in a sleek and responsive design. With Vite for bundling and Vitest for testing, our app guarantees a smooth user experience.",
     languages: [
       "▹ React",
+      "▹ react-router",
+      "▹ eslint",
       "▹ post-css",
       "▹ Typescript",
       "▹ vite",
@@ -49,52 +53,61 @@ const webData = [
   },
   {
     id: 6,
-    name: "Clothes Store",
+    name: "3D Store",
     img: web06,
-    code: "https://github.com/AngelDarco/Web_Page-04",
-    browse:
-      " http://darcocorporation.scienceontheweb.net/pages/webs/page03_clothesStore/",
-    description: "Responsive Clothes Store created with ThreeJs models",
+    code: "https://github.com/AngelDarco/store-treeJs",
+    browse: "https://store-threejs.netlify.app/",
+    description:
+      "Three.js Store, showcasing stunning 3D experiences built with HTML, CSS, and JavaScript. Leveraging React Three Fiber and TypeScript, we've crafted a seamless shopping experience deployed on Netlify. Created for the purpose of discover the endless possibilities of 3D on the web!",
     languages: ["▹ html", "▹ css", "▹ js", "▹ React three fiber"]
   },
   {
     id: 5,
-    name: "Library",
+    name: "Library App",
     img: web05,
-    code: "https://github.com/AngelDarco/FirebaseCrud",
-    browse:
-      "http://darcocorporation.scienceontheweb.net/pages/webs/page04_Library/",
-    description: "CRUD in firebase",
-    languages: ["▹ html", "▹ css", "▹ js", "▹ React", "▹ sass", "▹ firebase"]
+    code: "https://github.com/AngelDarco/library-app",
+    browse: "https://library-c4c93.web.app/",
+    description:
+      "Discover our library app, built with HTML, CSS, and JavaScript, powered by React and TypeScript. With features like routing using React Router, Firebase integration for real-time database, storage, and user authentication, users can like, download, upload, and delete their own books seamlessly. Plus, with the added flexibility of Sass for styling, our app offers an intuitive and responsive user experience.",
+    languages: [
+      "▹ html",
+      "▹ css",
+      "▹ js",
+      "▹ React",
+      "▹ sass",
+      "▹ typescript",
+      "▹ react-router",
+      "▹ firebase"
+    ]
   },
   {
     id: 4,
-    name: "Test Recruters",
+    name: "Los Angeles Mountains",
     img: web04,
-    code: "https://github.com/AngelDarco/jobInterviewTest",
-    browse:
-      "http://darcocorporation.scienceontheweb.net/pages/webs/page05_TestRecruters/",
-    description: "Web page for a job interview in indeed",
+    code: "https://github.com/AngelDarco/los-angeles-mountains",
+    browse: "https://mountains-los-angeles.netlify.app/",
+    description:
+      "Los Angeles Mountains is a responsive web page project, tasked during a job interview. Using raw JavaScript and CSS, I created a seamless navigation experience with React Router. The page is designed to showcase the breathtaking beauty of the Los Angeles mountains, with responsive styling ensuring optimal viewing across various devices.",
     languages: ["▹ html", "▹ css", "▹ js"]
   },
   {
     id: 3,
     name: "Netflix Clone",
     img: web03,
-    code: "https://github.com/AngelDarco/Css_Netflix_Copia",
-    browse:
-      "http://darcocorporation.scienceontheweb.net/pages/webs/page06_Netflix/",
-    description: "Clone of Netflix page",
+    code: "https://github.com/AngelDarco/twin-netflix",
+    browse: "http://netflix-twin.netlify.app/",
+    description:
+      "Netflix Twin project, a stunning replica of Netflix built from scratch using HTML, CSS, and JavaScript. Immerse yourself in the world of streaming with this faithful recreation, deployed on Netlify for easy access.",
     languages: ["▹ html", "▹ css", "▹ js"]
   },
   {
     id: 2,
-    name: "Boutique",
+    name: "Norma Store",
     img: web02,
-    code: "https://github.com/AngelDarco/TiendaRopa",
-    browse:
-      "http://darcocorporation.scienceontheweb.net/pages/webs/page07_Boutique/",
-    description: "e-commerce with database of users, like and shoping car",
+    code: "https://github.com/AngelDarco/project-norma",
+    browse: "http://norma-store.scienceontheweb.net/",
+    description:
+      "Norma Store, your one-stop destination for seamless shopping experiences. Our dynamic web page is crafted using HTML, CSS, JavaScript, PHP, MySQL, SQL, and Vite. Users can effortlessly like products, with their preferences securely stored in local storage. With our robust cart feature, users can add products and seamlessly upload their selections to our MySQL database. Plus, our user management system allows for easy creation and login, ensuring a personalized and convenient shopping journey.",
     languages: [
       "▹ html",
       "▹ css",
@@ -102,18 +115,17 @@ const webData = [
       "▹ php",
       "▹ mysql",
       "▹ sql",
-      "▹ webpack"
+      "▹ vite"
     ]
   },
   {
     id: 1,
     name: "E-Commerce",
     img: web01,
-    code: "https://github.com/AngelDarco/Proyecto_Branda",
-    browse:
-      "http://darcocorporation.scienceontheweb.net/pages/webs/page08_BrandaStore/",
+    code: "https://github.com/AngelDarco/project-branda",
+    browse: "http://branda-store.scienceontheweb.net/",
     description:
-      "E-commerce with database of registration of users, login and shopping car in mysql",
+      "The Beauty Face project involved the creation of a comprehensive cosmetic store, leveraging a range of technologies including HTML, CSS, JavaScript, PHP, MySQL, SQL, and Vite. The backend infrastructure was established using PHP and MySQL, with PHP scripts handling server-side operations such as database interaction and user authentication. The MySQL database was designed to store product information, user data, and cart selections securely. JavaScript was utilized to implement dynamic features on the front end, enabling functionalities like product liking, cart management, and user interaction. Additionally, Vite was employed for efficient bundling and development. Together, these technologies facilitated the creation of a robust and user-friendly cosmetic store experience for Beauty Face customers.",
     languages: [
       "▹ html",
       "▹ css",
@@ -134,10 +146,10 @@ const npmData = [
     id: 1,
     name: "Darkmode",
     img: npm01,
-    code: "https://github.com/AngelDarco/Css_Youtube_Twin",
-    browse: "https://youtube-twin.up.railway.app/",
+    code: "https://github.com/AngelDarco/darco-darkmode",
+    browse: "https://angeldarco.github.io/darco-darkmode/",
     description:
-      "A component that changes the styles of the page, better than dark and light mode, with a switch button, and the default user system theme.",
+      "A React component that changes the styles of the page, better than dark and light mode, with a switch button, and the default user system theme.",
     languages: ["react", "typescript"]
   }
 ];
