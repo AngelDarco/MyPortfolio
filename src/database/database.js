@@ -15,10 +15,12 @@ import {
   web05,
   web06,
   web07,
-  web08
+  web08,
+  darkmode,
+  cursors,
+  viewer,
+  loader
 } from "./imports.js";
-
-import npm01 from "../assets/img/npm01.gif";
 
 const webData = [
   {
@@ -145,12 +147,52 @@ const npmData = [
   {
     id: 1,
     name: "Darkmode",
-    img: npm01,
+    img: darkmode,
     code: "https://github.com/AngelDarco/darco-darkmode",
     browse: "https://angeldarco.github.io/darco-darkmode/",
     description:
-      "A React component that changes the styles of the page, better than dark and light mode, with a switch button, and the default user system theme.",
+      "darco-dark-mode is A React module that changes the styles of the page, better than dark and light mode, with a switch button, and the default user system theme.",
     languages: ["react", "typescript"]
+  },
+  {
+    id: 2,
+    name: "Cursor Colors",
+    img: cursors,
+    code: "https://github.com/AngelDarco/darco-cursors",
+    browse: "https://angeldarco.github.io/darco-cursors/",
+    description:
+      "darco-cursors is a React module that change the cursor experience in the browser, with a collection of default Neon Cursors, or the option to set your own set of cursors.",
+    languages: ["react", "typescript"]
+  },
+  {
+    id: 3,
+    name: "Viewer",
+    img: viewer,
+    code: "https://github.com/AngelDarco/darco-viewer",
+    browse: "https://angeldarco.github.io/darco-viewer/",
+    description:
+      "darco-viewer is a React module, crafted with React, TypeScript, PostCSS, and Tailwind CSS. This module provides a seamless viewing experience with dynamic rendering capabilities, leveraging the power of React's component-based architecture. TypeScript ensures type safety and enhances code maintainability, while PostCSS and Tailwind CSS deliver a polished and responsive user interface.",
+    languages: ["react", "typescript", "postcss", "css"]
+  },
+  {
+    id: 4,
+    name: "Loader",
+    img: loader,
+    code: "https://github.com/AngelDarco/darco-loader",
+    browse: "https://angeldarco.github.io/darco-loader/",
+    description:
+      "darco-loader, built with React TypeScript, is tailored for seamless integration with React and Three.js environments. It optimizes development by effortlessly handling TypeScript and PostCSS files, ensuring type safety, flexibility, and performance. Designed to work harmoniously with React and Three.js, it leverages the Suspense hook and Drei's useProgress hook for enhanced functionality. With easy integration and configurable options, Darco Loader elevates the development experience, enabling efficient styling and robust UIs.",
+    languages: ["react", "typescript", "postcss", "css"]
+  },
+  {
+    id: 5,
+    name: "Typewriter",
+    img: prettier,
+    code: "https://github.com/AngelDarco/darco-viewer",
+    browse: "https://angeldarco.github.io/darco-viewer/",
+    description:
+      "darco-viewer is a React module, crafted with React, TypeScript, PostCSS, and Tailwind CSS. This module provides a seamless viewing experience with dynamic rendering capabilities, leveraging the power of React's component-based architecture. TypeScript ensures type safety and enhances code maintainability, while PostCSS and Tailwind CSS deliver a polished and responsive user interface.",
+    languages: ["react", "typescript", "postcss", "css"]
   }
 ];
 

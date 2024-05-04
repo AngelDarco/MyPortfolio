@@ -17,6 +17,11 @@ import onedrive from "../assets/img/onedrive.png";
 import prettier from "../assets/img/prettier.jpg";
 import vite from "../assets/img/vite.png";
 
+import darkmode from "../assets/img/darkmode.png";
+import cursors from "../assets/img/cursors.gif";
+import viewer from "../assets/img/viewer.jpg";
+import loader from "../assets/img/loader.jpg";
+
 export {
   web01,
   web02,
@@ -34,5 +39,9 @@ export {
   codeforces,
   onedrive,
   prettier,
-  vite
+  vite,
+  darkmode,
+  cursors,
+  viewer,
+  loader
 };
