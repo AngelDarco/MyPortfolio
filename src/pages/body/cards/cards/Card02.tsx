@@ -6,18 +6,15 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
 
 export default function Card02({ observer }: { observer: boolean }) {
-  const refCard = useRef(null);
-
-  // if (refCard.current)
   new PureCounter({
     start: 0,
-    once: false
+    once: true
   });
 
   return (
     <section
       style={{
-        transform: observer ? "translateY(0)" : "translateY(-210%)",
+        transform: observer ? "translateY(0)" : "translateY(-250%)",
         transition: "transform 3s"
       }}
       className="card"
@@ -60,7 +57,6 @@ export default function Card02({ observer }: { observer: boolean }) {
             fill="var(--text-color)"
             version="1.1"
             id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 491.52 491.52"
           >
             <g>

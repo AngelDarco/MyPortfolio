@@ -205,7 +205,7 @@ const Contact = ({ ...props }) => {
                 <FaFileAlt />
                 <span className="contact-text gmail">
                   <a
-                    href="https://roxkincxbxsuvs8q.public.blob.vercel-storage.com/AGPresume-Qf9z9N7c3rHvtv9etLMVTIsl7b9S8G.pdf"
+                    href="https://roxkincxbxsuvs8q.public.blob.vercel-storage.com/AGPresume-ihrsjMOWhSgYBPpxWJr9kD66lBYocR.pdf"
                     target="_blank"
                     title="get my resume"
                     rel="noreferrer"
