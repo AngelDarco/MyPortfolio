@@ -7,4 +7,41 @@ import web06 from "../assets/img/web06.png";
 import web07 from "../assets/img/web07.jpg";
 import web08 from "../assets/img/web08.jpg";
 
-export { web01, web02, web03, web04, web05, web06, web07, web08 };
+import codesignal from "../assets/img/codesignal.jpg";
+import adventjs from "../assets/img/advenjs.jpeg";
+import bash from "../assets/img/bash.png";
+import codember from "../assets/img/codember.jpg";
+import coderbyte from "../assets/img/coderbyte.png";
+import codeforces from "../assets/img/codeforces.png";
+import onedrive from "../assets/img/onedrive.png";
+import prettier from "../assets/img/prettier.jpg";
+import vite from "../assets/img/vite.png";
+
+import darkmode from "../assets/img/darkmode.png";
+import cursors from "../assets/img/cursors.gif";
+import viewer from "../assets/img/viewer.jpg";
+import loader from "../assets/img/loader.jpg";
+
+export {
+  web01,
+  web02,
+  web03,
+  web04,
+  web05,
+  web06,
+  web07,
+  web08,
+  codesignal,
+  adventjs,
+  bash,
+  codember,
+  coderbyte,
+  codeforces,
+  onedrive,
+  prettier,
+  vite,
+  darkmode,
+  cursors,
+  viewer,
+  loader
+};

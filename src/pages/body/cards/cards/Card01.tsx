@@ -26,7 +26,7 @@ export default function Card01({ observer }: { observer: boolean }) {
       className="card"
     >
       <main className="firstCard">
-        <h1>Some data</h1>
+        <h1>Personal Info</h1>
 
         <article>
           <div ref={containerRef}>

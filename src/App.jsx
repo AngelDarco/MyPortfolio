@@ -35,7 +35,7 @@ function App() {
   }, [headerRef.current]);
 
   useEffect(() => {
-    // if (canvasRef.current) Particles(darkTheme);
+    if (canvasRef.current) Particles(darkTheme);
   }, [darkTheme]);
 
   const handlerDarkState = (isDark) => {
