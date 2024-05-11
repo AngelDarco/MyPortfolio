@@ -19,7 +19,8 @@ import {
   darkmode,
   cursors,
   viewer,
-  loader
+  loader,
+  leetcode
 } from "./imports.js";
 
 const webData = [
@@ -197,6 +198,16 @@ const npmData = [
 ];
 
 const codeData = [
+  {
+    id: 10,
+    name: "LeetCode",
+    img: leetcode,
+    code: "https://github.com/AngelDarco/leetcode-challenges",
+    browse: "https://leetcode.com/u/darcoGP/",
+    description:
+      "Github repository, A curated collection of problems from the renowned platform, each meticulously solved and explained. Whether you're a beginner seeking clarity or an experienced coder looking for optimization techniques, insights and strategies to conquer algorithmic puzzles.",
+    languages: ["javascript", "typescript", "eslint", "bun"]
+  },
   {
     id: 1,
     name: "Codesignal",
