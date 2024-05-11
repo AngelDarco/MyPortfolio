@@ -7,6 +7,7 @@ import web06 from "../assets/img/web06.png";
 import web07 from "../assets/img/web07.jpg";
 import web08 from "../assets/img/web08.jpg";
 
+import leetcode from "../assets/img/leetcode.png";
 import codesignal from "../assets/img/codesignal.jpg";
 import adventjs from "../assets/img/advenjs.jpeg";
 import bash from "../assets/img/bash.png";
@@ -31,6 +32,7 @@ export {
   web06,
   web07,
   web08,
+  leetcode,
   codesignal,
   adventjs,
   bash,
